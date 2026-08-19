@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ma'had Hamalatul Qur'an - Mencetak Generasi Unggul, Berkarakter, dan Berdaya Saing Global">
+    <title>MHQ - Ma'had Hamalatul Qur'an</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo MHQ" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">MHQ</span>
+                    <span class="logo-sub">Ma'had Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+                <li><a href="#programs" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="#facilities" class="nav-link">Fasilitas</a></li>
+                <li><a href="#faculty" class="nav-link">Dosen</a></li>
+                <li><a href="#news" class="nav-link">Berita</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="container hero-content">
+
+            <h1 class="hero-title animate-fade-up">
+                Mencetak Generasi<br>
+                <span class="highlight">Unggul & Inovatif</span>
+            </h1>
+            <p class="hero-desc animate-fade-up">
+                Menjadikan Generasi Muslim yang siap menjadi Khalifatullah Fil Ardl yang Abdillah dan Rahmatan lil Alamin dan Berakhlakul Karimah.
+            </p>
+            <div class="hero-buttons animate-fade-up">
+                <a href="daftar.html" class="btn btn-primary">
+                    <i class='bx bxs-user-plus'></i> Daftar Sekarang
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class='bx bx-play-circle'></i> Pelajari Lebih Lanjut
+                </a>
+            </div>
+
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class='bx bx-chevron-down'></i>
+        </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tentang Kami</span>
+                <h2 class="section-title">Mengenal Ma'had Hamalatul Qur'an</h2>
+                <p class="section-desc">Ma'had Hamalatul Qur'an hadir sebagai pondok pesantren tahfidz yang berkomitmen mencetak generasi penghafal Al-Qur'an berakhlak mulia dan berwawasan luas.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image animate-left">
+                    <div class="about-img-wrapper">
+                        <img src="img/about-img.jpg" alt="Bangunan Ma'had" loading="lazy">
+                        <div class="about-img-badge">
+                            <i class='bx bxs-award'></i>
+                            <div>
+                                <strong>Pesantren Terbaik</strong>
+                                <span>Karawang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content animate-right">
+                    <h3>Membangun Fondasi Pendidikan Berkualitas Tinggi</h3>
+                    <p>Ma'had Hamalatul Qur'an (MHQ) adalah perguruan tinggi swasta terkemuka yang berfokus pada bidang teknologi informasi dan komunikasi. Kami berkomitmen untuk menyediakan pendidikan yang inovatif, relevan, dan berorientasi pada kebutuhan industri global.</p>
+                    <p>Dengan dukungan lebih dari 150 dosen berpengalaman, laboratorium berteknologi tinggi, dan kemitraan dengan ratusan perusahaan terkemuka, MHQ memastikan setiap lulusan siap berkompetisi di era digital.</p>
+
+                    <div class="about-tabs">
+                        <button class="tab-btn active" data-tab="visi">Visi</button>
+                        <button class="tab-btn" data-tab="misi">Misi</button>
+                        <button class="tab-btn" data-tab="nilai">Nilai</button>
+                    </div>
+                    <div class="tab-content active" id="tab-visi">
+                        <p><i class='bx bxs-target-lock'></i> Menjadi Sekolah Tinggi Teknologi terkemuka di Asia Tenggara yang menghasilkan lulusan unggul, berkarakter, dan mampu bersaing di era global dengan landasan nilai-nilai kebangsaan.</p>
+                    </div>
+                    <div class="tab-content" id="tab-misi">
+                        <ul>
+                            <li><i class='bx bx-check-circle'></i> Menyelenggarakan pendidikan tinggi teknologi berkualitas dan relevan</li>
+                            <li><i class='bx bx-check-circle'></i> Mengembangkan penelitian inovatif berbasis kebutuhan industri</li>
+                            <li><i class='bx bx-check-circle'></i> Melaksanakan pengabdian masyarakat yang bermanfaat</li>
+                            <li><i class='bx bx-check-circle'></i> Membangun kemitraan strategis dengan industri dan pemerintah</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="tab-nilai">
+                        <div class="nilai-grid">
+                            <div class="nilai-item"><i class='bx bxs-bulb'></i> Inovasi</div>
+                            <div class="nilai-item"><i class='bx bxs-shield-alt-2'></i> Integritas</div>
+                            <div class="nilai-item"><i class='bx bxs-group'></i> Kolaborasi</div>
+                            <div class="nilai-item"><i class='bx bxs-star'></i> Keunggulan</div>
+                        </div>
+                    </div>
+
+                    <a href="#programs" class="btn btn-primary mt-2">
+                        <i class='bx bx-book-open'></i> Lihat Program Pendidikan
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-action animate-fade-up" style="text-align: center; margin-top: 40px;">
+                <a href="berita.html" class="btn btn-outline">Lihat Semua Berita <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== KEUNGGULAN ===================== -->
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages-grid">
+                <div class="adv-item animate-up">
+                    <div class="adv-icon"><i class='bx bxs-graduation'></i></div>
+                    <h4>Akreditasi Unggul</h4>
+                    <p>Program pendidikan tahfidz dan diniyah yang terstruktur dan terpadu</p>
+                </div>
+                <div class="adv-item animate-up" style="animation-delay:0.1s">
+                    <div class="adv-icon"><i class='bx bxs-briefcase'></i></div>
+                    <h4>Kerjasama Industri</h4>
+                    <p>Bermitra dengan 200+ perusahaan nasional dan multinasional untuk magang dan karir</p>
+                </div>
+                <div class="adv-item animate-up" style="animation-delay:0.2s">
+                    <div class="adv-icon"><i class='bx bxs-flask'></i></div>
+                    <h4>Lab Modern</h4>
+                    <p>Fasilitas laboratorium berteknologi terkini mendukung pembelajaran praktis</p>
+                </div>
+                <div class="adv-item animate-up" style="animation-delay:0.3s">
+                    <div class="adv-icon"><i class='bx bxs-globe'></i></div>
+                    <h4>Jaringan Global</h4>
+                    <p>Program pertukaran mahasiswa dengan universitas mitra di 15+ negara</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROGRAM STUDI ===================== -->
+    <section class="programs section" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Program Pendidikan</span>
+                <h2 class="section-title">Pilih Masa Depanmu</h2>
+                <p class="section-desc">Kami menawarkan berbagai program studi unggulan yang dirancang bersama para ahli industri untuk memastikan relevansi di dunia kerja.</p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card animate-up">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                        <i class='bx bx-book-reader'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">Program Inti</span>
+                        <h3>Tahfidz Al-Qur'an</h3>
+                        <p>Program unggulan menghafal Al-Qur'an 30 juz bersanad dengan metode tahsin yang tepat dan mutqin.</p>
+                        <div class="program-tags">
+                            <span>Tahsin</span>
+                            <span>Tahfidz 30 Juz</span>
+                            <span>Qiroat</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card animate-up" style="animation-delay:0.1s">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+                        <i class='bx bx-book-heart'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">Program Inti</span>
+                        <h3>Sistem Informasi</h3>
+                        <p>Kuasai analisis bisnis, manajemen database, enterprise system, dan transformasi digital.</p>
+                        <div class="program-tags">
+                            <span>Business Analytics</span>
+                            <span>ERP Systems</span>
+                            <span>Data Science</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card animate-up" style="animation-delay:0.2s">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">
+                        <i class='bx bx-network-chart'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">Program Inti</span>
+                        <h3>Teknik Jaringan</h3>
+                        <p>Pelajari infrastruktur jaringan, keamanan siber, cloud computing, dan IoT.</p>
+                        <div class="program-tags">
+                            <span>Cloud Computing</span>
+                            <span>Network Security</span>
+                            <span>IoT</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi B</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card animate-up" style="animation-delay:0.3s">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7)">
+                        <i class='bx bx-stats'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">D4 - Diploma</span>
+                        <h3>Manajemen Informatika</h3>
+                        <p>Kombinasi manajemen bisnis dan teknologi informasi untuk kepemimpinan digital.</p>
+                        <div class="program-tags">
+                            <span>Digital Marketing</span>
+                            <span>Project Management</span>
+                            <span>IT Governance</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card animate-up" style="animation-delay:0.4s">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #fa709a, #fee140)">
+                        <i class='bx bx-mobile-alt'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">D3 - Diploma</span>
+                        <h3>Rekayasa Perangkat Lunak</h3>
+                        <p>Fokus pada pengembangan aplikasi web, mobile, dan desktop dengan teknologi terkini.</p>
+                        <div class="program-tags">
+                            <span>Web Development</span>
+                            <span>Mobile Apps</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi B</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card animate-up" style="animation-delay:0.5s">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb)">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <div class="program-body">
+                        <span class="program-level">S2 - Pascasarjana</span>
+                        <h3>Magister Teknologi Informasi</h3>
+                        <p>Program pascasarjana untuk pengembangan kompetensi lanjutan di bidang TI.</p>
+                        <div class="program-tags">
+                            <span>Research Methods</span>
+                            <span>Big Data</span>
+                            <span>AI Research</span>
+                        </div>
+                        <div class="program-footer">
+                            <span class="accredited"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                            <a href="#contact" class="prog-link">Pelajari <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FASILITAS ===================== -->
+    <section class="facilities section" id="facilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fasilitas</span>
+                <h2 class="section-title">Fasilitas Kampus Berstandar Internasional</h2>
+                <p class="section-desc">Kami menyediakan fasilitas lengkap dan modern untuk mendukung proses belajar mengajar yang efektif dan menyenangkan.</p>
+            </div>
+
+            <div class="facilities-grid">
+                <div class="facility-card large animate-up">
+                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=500&fit=crop" alt="Laboratorium Komputer" loading="lazy">
+                    <div class="facility-overlay">
+                        <i class='bx bxs-laptop'></i>
+                        <h4>Laboratorium Komputer</h4>
+                        <p>15 lab komputer dengan 500+ workstation berteknologi terkini</p>
+                    </div>
+                </div>
+                <div class="facility-card animate-up" style="animation-delay:0.1s">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Perpustakaan" loading="lazy">
+                    <div class="facility-overlay">
+                        <i class='bx bxs-book-reader'></i>
+                        <h4>Asrama Santri</h4>
+                        <p>50.000+ koleksi buku dan akses e-journal internasional</p>
+                    </div>
+                </div>
+                <div class="facility-card animate-up" style="animation-delay:0.2s">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop" alt="Pusat Olahraga" loading="lazy">
+                    <div class="facility-overlay">
+                        <i class='bx bxs-dumbbell'></i>
+                        <h4>Pusat Olahraga</h4>
+                        <p>Gym, lapangan basket, futsal, dan kolam renang olimpik</p>
+                    </div>
+                </div>
+                <div class="facility-card animate-up" style="animation-delay:0.3s">
+                    <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=400&h=300&fit=crop" alt="Ruang Inovasi" loading="lazy">
+                    <div class="facility-overlay">
+                        <i class='bx bxs-book-reader'></i>
+                        <h4>Perpustakaan Islami</h4>
+                        <p>Koleksi ribuan kitab salaf, buku agama, dan area baca yang tenang</p>
+                    </div>
+                </div>
+                <div class="facility-card animate-up" style="animation-delay:0.4s">
+                    <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=400&h=300&fit=crop" alt="Kantin" loading="lazy">
+                    <div class="facility-overlay">
+                        <i class='bx bxs-restaurant'></i>
+                        <h4>Food Court</h4>
+                        <p>Kantin modern dengan berbagai pilihan menu sehat dan terjangkau</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== DOSEN ===================== -->
+    <section class="faculty section" id="faculty">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tim Pengajar</span>
+                <h2 class="section-title">Dosen Berpengalaman & Berdedikasi</h2>
+                <p class="section-desc">Dipandu oleh akademisi dan praktisi industri terbaik yang berkomitmen untuk kesuksesan setiap mahasiswa.</p>
+            </div>
+
+            <div class="faculty-grid">
+                <div class="faculty-card animate-up">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Prof. Dr. Ahmad Santoso" loading="lazy">
+                        <div class="faculty-social">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#"><i class='bx bx-envelope'></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h4>Prof. Dr. Ahmad Santoso, M.Kom</h4>
+                        <span class="faculty-role">Ketua Jurusan Teknik Informatika</span>
+                        <p>Doktor lulusan MIT, spesialis Kecerdasan Buatan dan Machine Learning dengan 20 tahun pengalaman</p>
+                        <div class="faculty-tags">
+                            <span>AI</span><span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card animate-up" style="animation-delay:0.1s">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="Dr. Siti Rahayu" loading="lazy">
+                        <div class="faculty-social">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#"><i class='bx bx-envelope'></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h4>Dr. Siti Rahayu, M.T</h4>
+                        <span class="faculty-role">Kepala Program Sistem Informasi</span>
+                        <p>Pakar Enterprise Systems dan Digital Transformation, konsultan di 30+ perusahaan Fortune 500</p>
+                        <div class="faculty-tags">
+                            <span>ERP</span><span>Digital Transform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card animate-up" style="animation-delay:0.2s">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Dr. Budi Prasetyo" loading="lazy">
+                        <div class="faculty-social">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#"><i class='bx bx-envelope'></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h4>Dr. Budi Prasetyo, M.Sc</h4>
+                        <span class="faculty-role">Direktur Innovation Hub</span>
+                        <p>Ex-Google Engineer, spesialis Cloud Architecture dan Cybersecurity dengan 100+ publikasi ilmiah</p>
+                        <div class="faculty-tags">
+                            <span>Cloud</span><span>Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card animate-up" style="animation-delay:0.3s">
+                    <div class="faculty-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Dr. Maya Putri" loading="lazy">
+                        <div class="faculty-social">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#"><i class='bx bx-envelope'></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h4>Dr. Maya Putri, M.Eng</h4>
+                        <span class="faculty-role">Koordinator Riset & Inovasi</span>
+                        <p>Peneliti bidang Data Science dan Big Data Analytics, penerima penghargaan peneliti terbaik nasional 2023</p>
+                        <div class="faculty-tags">
+                            <span>Data Science</span><span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== BERITA & AGENDA ===================== -->
+    <section class="news section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Berita & Agenda</span>
+                <h2 class="section-title">Informasi Terkini</h2>
+                <p class="section-desc">Ikuti perkembangan terbaru dari kampus kami dan berbagai kegiatan menarik yang akan datang.</p>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card featured animate-left">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop" alt="Wisuda 2024" loading="lazy">
+                        <span class="news-cat">Akademik</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span><i class='bx bx-calendar'></i> 15 Agustus 2026</span>
+                            <span><i class='bx bx-user'></i> Humas MHQ</span>
+                        </div>
+                        <h3>Khataman & Wisuda Tahfidz Angkatan ke-5, 50 Santri Hafal 30 Juz</h3>
+                        <p>Ma'had Hamalatul Qur'an sukses menggelar upacara wisuda angkatan ke-18 dengan jumlah wisudawan terbanyak sepanjang sejarah kampus...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </article>
+
+                <div class="news-side animate-right">
+                    <article class="news-small">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=200&h=130&fit=crop" alt="Seminar AI" loading="lazy">
+                        <div>
+                            <span class="news-cat-sm">Seminar</span>
+                            <h4>Seminar Nasional AI & Future Technology 2026</h4>
+                            <span class="news-date"><i class='bx bx-calendar'></i> 28 Agustus 2026</span>
+                        </div>
+                    </article>
+
+                    <article class="news-small">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=200&h=130&fit=crop" alt="Hackathon" loading="lazy">
+                        <div>
+                            <span class="news-cat-sm">Kompetisi</span>
+                            <h4>Penerimaan Santri Baru Tahun Ajaran 2026/2027 Resmi Dibuka</h4>
+                            <span class="news-date"><i class='bx bx-calendar'></i> 5 September 2026</span>
+                        </div>
+                    </article>
+
+                    <article class="news-small">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200&h=130&fit=crop" alt="Penerimaan Mahasiswa" loading="lazy">
+                        <div>
+                            <span class="news-cat-sm">Penerimaan</span>
+                            <h4>Penerimaan Mahasiswa Baru Tahun Akademik 2026/2027 Dibuka</h4>
+                            <span class="news-date"><i class='bx bx-calendar'></i> 1 September 2026</span>
+                        </div>
+                    </article>
+
+                    <article class="news-small">
+                        <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=200&h=130&fit=crop" alt="Partnership" loading="lazy">
+                        <div>
+                            <span class="news-cat-sm">Kemitraan</span>
+                            <h4>Kajian Umum Bersama Syaikh dari Timur Tengah di Masjid Jami' MHQ</h4>
+                            <span class="news-date"><i class='bx bx-calendar'></i> 10 Agustus 2026</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONI ===================== -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimoni</span>
+                <h2 class="section-title">Apa Kata Mereka?</h2>
+                <p class="section-desc">Dengarkan cerita sukses dari para alumni dan mahasiswa kami yang telah membuktikan kualitas pendidikan MHQ.</p>
+            </div>
+
+            <div class="testimonials-wrapper">
+                <div class="testimonials-slider" id="testimonialSlider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class='bx bxs-quote-alt-left'></i></div>
+                        <p>"MHQ mengubah hidup saya sepenuhnya. Kurikulum yang up-to-date dan dosen berpengalaman membuat saya siap menghadapi dunia kerja. Kini saya bekerja sebagai Software Engineer di Google Singapore."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Alumni">
+                            <div>
+                                <strong>Rizky Firmansyah</strong>
+                                <span>Software Engineer @ Google Singapore</span>
+                                <span>Alumni Angkatan 3</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class='bx bxs-quote-alt-left'></i></div>
+                        <p>"Fasilitas kampus sangat lengkap dan modern. Lab komputer yang canggih membuat saya bisa belajar teknologi terbaru langsung di kampus. Program magang ke perusahaan top juga sangat membantu karir saya."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Alumni">
+                            <div>
+                                <strong>Nurul Hidayah</strong>
+                                <span>Data Scientist @ Tokopedia</span>
+                                <span>Alumni Sistem Informasi 2021</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote"><i class='bx bxs-quote-alt-left'></i></div>
+                        <p>"Dosen-dosen di MHQ tidak hanya mengajar teori, tapi juga berbagi pengalaman nyata dari industri. Ini yang membuat lulusan MHQ selalu diminati perusahaan. Saya bangga bisa menjadi bagian dari keluarga MHQ."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="Alumni">
+                            <div>
+                                <strong>Dimas Pratama</strong>
+                                <span>CTO @ Startup Unicorn Indonesia</span>
+                                <span>Alumni Teknik Informatika 2019</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="nav-prev" id="prevBtn"><i class='bx bx-chevron-left'></i></button>
+                    <button class="nav-next" id="nextBtn"><i class='bx bx-chevron-right'></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA BANNER ===================== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content animate-up">
+                <h2>Siap Memulai Perjalanan Akademikmu?</h2>
+                <p>Bergabunglah dengan lebih dari 5.000 mahasiswa aktif dan raih masa depanmu bersama MHQ.</p>
+                <div class="cta-buttons">
+                    <a href="daftar.html" class="btn btn-white">
+                        <i class='bx bxs-user-plus'></i> Daftar Sekarang
+                    </a>
+                    <a href="tel:+62211234567" class="btn btn-outline-white">
+                        <i class='bx bx-phone'></i> Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hubungi Kami</span>
+                <h2 class="section-title">Kami Siap Membantu Anda</h2>
+                <p class="section-desc">Ada pertanyaan tentang pendaftaran atau program studi? Tim kami siap membantu Anda 24/7.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info animate-left">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-map'></i></div>
+                        <div>
+                            <h4>Alamat Kampus</h4>
+                            <p>Jl. Teknologi Raya No. 123, Kawasan Pendidikan<br>Jakarta Selatan, DKI Jakarta 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-phone'></i></div>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>(021) 1234-5678</p>
+                            <p>+62 812-3456-7890 (WhatsApp)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-envelope'></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@MHQ.ac.id</p>
+                            <p>pendaftaran@MHQ.ac.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-time'></i></div>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin – Jumat: 08.00 – 16.00 WIB</p>
+                            <p>Sabtu: 08.00 – 12.00 WIB</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-right">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h3>Kirim Pesan</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">No. Telepon <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx" required>
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="program">Program Pendidikan yang Diminati</label>
+                            <select id="program" name="program">
+                                <option value="">-- Pilih Program Pendidikan --</option>
+                                <option>Tahfidz Al-Qur'an</option>
+                                <option>Dirosah Islamiyah</option>
+                                <option>Bahasa Arab</option>
+                                <option>Program I'dad</option>
+                                <option>Pengkaderan Da'i</option>
+                                <option>S2 Magister Teknologi Informasi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan <span>*</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tuliskan pertanyaan atau pesan Anda..." required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class='bx bx-send'></i> Kirim Pesan
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" style="display:none">
+                        <i class='bx bxs-check-circle'></i>
+                        <h4>Pesan Berhasil Dikirim!</h4>
+                        <p>Terima kasih telah menghubungi kami. Tim kami akan segera menghubungi Anda dalam 1x24 jam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-wrapper animate-up">
+                <div class="map-placeholder">
+                    <i class='bx bxs-map-pin'></i>
+                    <h4>Ma'had Hamalatul Qur'an</h4>
+                    <p>Jl. Teknologi Raya No. 123, Jakarta Selatan</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary">
+                        <i class='bx bx-map'></i> Buka di Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="#home" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo MHQ" class="footer-logo-img">
+                        <span>MHQ</span>
+                    </a>
+                    <p>Ma'had Hamalatul Qur'an berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#home"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="#about"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="#facilities"><i class='bx bx-chevron-right'></i> Fasilitas</a></li>
+                        <li><a href="#faculty"><i class='bx bx-chevron-right'></i> Dosen</a></li>
+                        <li><a href="#news"><i class='bx bx-chevron-right'></i> Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Dirosah Islamiyah</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Bahasa Arab</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Program I'dad</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> Pengkaderan Da'i</a></li>
+                        <li><a href="#programs"><i class='bx bx-chevron-right'></i> S2 Magister TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><i class='bx bxs-map'></i> Karawang, Jawa Barat</li>
+                        <li><i class='bx bxs-phone'></i> (021) 1234-5678</li>
+                        <li><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</li>
+                        <li><i class='bx bxs-envelope'></i> info@MHQ.ac.id</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Ma'had Hamalatul Qur'an. Hak Cipta Dilindungi.</p>
+                <p>Dibuat dengan <i class='bx bxs-heart'></i> untuk pendidikan Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+

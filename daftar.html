@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulir Pendaftaran Santri Baru - Ma'had Hamalatul Qur'an">
+    <title>Pendaftaran Santri Baru - MHQ</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/daftar.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo MHQ" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">MHQ</span>
+                    <span class="logo-sub">Ma'had Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+                <li><a href="index.html#programs" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="index.html#facilities" class="nav-link">Fasilitas</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn active-page">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html"><i class='bx bx-home'></i> Beranda</a>
+                <i class='bx bx-chevron-right'></i>
+                <span>Pendaftaran Santri Baru</span>
+            </div>
+            <h1>Pendaftaran <span class="highlight-green">Santri Baru</span></h1>
+            <p>Tahun Ajaran 2026/2027 — Daftarkan putra Anda dan mulai perjalanan menghafal Al-Qur'an bersama MHQ</p>
+        </div>
+    </section>
+
+    <!-- ===================== INFO STRIP ===================== -->
+    <div class="info-strip">
+        <div class="container info-strip-grid">
+            <div class="info-strip-item">
+                <i class='bx bx-calendar'></i>
+                <div>
+                    <strong>Pendaftaran Dibuka</strong>
+                    <span>1 Sep – 30 Nov 2026</span>
+                </div>
+            </div>
+            <div class="info-strip-item">
+                <i class='bx bx-book-open'></i>
+                <div>
+                    <strong>Awal Perkuliahan</strong>
+                    <span>Januari 2027</span>
+                </div>
+            </div>
+            <div class="info-strip-item">
+                <i class='bx bx-money'></i>
+                <div>
+                    <strong>Biaya Pendaftaran</strong>
+                    <span>Rp 150.000</span>
+                </div>
+            </div>
+            <div class="info-strip-item">
+                <i class='bx bxl-whatsapp'></i>
+                <div>
+                    <strong>Info & Bantuan</strong>
+                    <span>+62 812-3456-7890</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <section class="daftar-section">
+        <div class="container daftar-layout">
+
+            <!-- ---- FORM AREA ---- -->
+            <div class="form-area">
+
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step active" id="step-ind-1">
+                        <div class="step-circle"><i class='bx bx-user'></i></div>
+                        <span>Data Pribadi</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step-ind-2">
+                        <div class="step-circle"><i class='bx bx-book'></i></div>
+                        <span>Data Akademik</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step-ind-3">
+                        <div class="step-circle"><i class='bx bx-check-circle'></i></div>
+                        <span>Konfirmasi</span>
+                    </div>
+                </div>
+
+                <form id="regForm" novalidate>
+
+                    <!-- ======== STEP 1: DATA PRIBADI ======== -->
+                    <div class="form-step active" id="step1">
+                        <div class="step-header">
+                            <h2><i class='bx bx-user-circle'></i> Data Pribadi</h2>
+                            <p>Isi data diri Anda dengan lengkap dan benar sesuai dokumen resmi.</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="namaLengkap">Nama Lengkap <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-user'></i>
+                                    <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Sesuai ijazah/KTP" required>
+                                </div>
+                                <span class="form-error" id="err-namaLengkap"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="nik">NIK (No. KTP/KK) <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-id-card'></i>
+                                    <input type="text" id="nik" name="nik" placeholder="16 digit nomor NIK" maxlength="16" required>
+                                </div>
+                                <span class="form-error" id="err-nik"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tempatLahir">Tempat Lahir <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-map'></i>
+                                    <input type="text" id="tempatLahir" name="tempatLahir" placeholder="Kota tempat lahir" required>
+                                </div>
+                                <span class="form-error" id="err-tempatLahir"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggalLahir">Tanggal Lahir <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-calendar'></i>
+                                    <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+                                </div>
+                                <span class="form-error" id="err-tanggalLahir"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jenisKelamin">Jenis Kelamin <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-male-female'></i>
+                                    <select id="jenisKelamin" name="jenisKelamin" required>
+                                        <option value="">-- Pilih --</option>
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                </div>
+                                <span class="form-error" id="err-jenisKelamin"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="agama">Agama <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-church'></i>
+                                    <select id="agama" name="agama" required>
+                                        <option value="">-- Pilih Agama --</option>
+                                        <option>Islam</option>
+                                        <option>Kristen Protestan</option>
+                                        <option>Kristen Katolik</option>
+                                        <option>Hindu</option>
+                                        <option>Buddha</option>
+                                        <option>Konghucu</option>
+                                    </select>
+                                </div>
+                                <span class="form-error" id="err-agama"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="alamat">Alamat Lengkap <span>*</span></label>
+                            <div class="input-wrapper">
+                                <i class='bx bx-home-alt'></i>
+                                <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, RT/RW, Kelurahan, Kecamatan, Kota, Provinsi" required></textarea>
+                            </div>
+                            <span class="form-error" id="err-alamat"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="noHp">No. HP / WhatsApp <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bxl-whatsapp'></i>
+                                    <input type="tel" id="noHp" name="noHp" placeholder="08xx-xxxx-xxxx" required>
+                                </div>
+                                <span class="form-error" id="err-noHp"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailPribadi">Email <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-envelope'></i>
+                                    <input type="email" id="emailPribadi" name="emailPribadi" placeholder="nama@email.com" required>
+                                </div>
+                                <span class="form-error" id="err-emailPribadi"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="namaOrtu">Nama Orang Tua / Wali <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-group'></i>
+                                    <input type="text" id="namaOrtu" name="namaOrtu" placeholder="Nama lengkap orang tua/wali" required>
+                                </div>
+                                <span class="form-error" id="err-namaOrtu"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="hpOrtu">No. HP Orang Tua / Wali <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-phone'></i>
+                                    <input type="tel" id="hpOrtu" name="hpOrtu" placeholder="08xx-xxxx-xxxx" required>
+                                </div>
+                                <span class="form-error" id="err-hpOrtu"></span>
+                            </div>
+                        </div>
+
+                        <div class="step-nav">
+                            <span></span>
+                            <button type="button" class="btn btn-primary" id="toStep2">
+                                Selanjutnya <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ======== STEP 2: DATA AKADEMIK ======== -->
+                    <div class="form-step" id="step2">
+                        <div class="step-header">
+                            <h2><i class='bx bx-book-open'></i> Data Akademik</h2>
+                            <p>Informasi latar belakang pendidikan dan pilihan program pendidikan Anda.</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="asalSekolah">Asal Sekolah / Madrasah <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bxs-school'></i>
+                                    <input type="text" id="asalSekolah" name="asalSekolah" placeholder="Nama sekolah asal" required>
+                                </div>
+                                <span class="form-error" id="err-asalSekolah"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="jurusanSekolah">Jurusan di Sekolah <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-category'></i>
+                                    <select id="jurusanSekolah" name="jurusanSekolah" required>
+                                        <option value="">-- Pilih Jurusan --</option>
+                                        <option>IPA / MIPA</option>
+                                        <option>IPS</option>
+                                        <option>Bahasa</option>
+                                        <option>SMK Teknik Informatika</option>
+                                        <option>SMK Teknik Komputer</option>
+                                        <option>SMK Bisnis & Manajemen</option>
+                                        <option>SMK lainnya</option>
+                                        <option>MA / Madrasah Aliyah</option>
+                                        <option>Lainnya</option>
+                                    </select>
+                                </div>
+                                <span class="form-error" id="err-jurusanSekolah"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tahunLulus">Tahun Lulus <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-calendar-check'></i>
+                                    <select id="tahunLulus" name="tahunLulus" required>
+                                        <option value="">-- Pilih Tahun --</option>
+                                        <option>2026</option>
+                                        <option>2025</option>
+                                        <option>2024</option>
+                                        <option>2023</option>
+                                        <option>2022</option>
+                                        <option>2021</option>
+                                        <option>Sebelum 2021</option>
+                                    </select>
+                                </div>
+                                <span class="form-error" id="err-tahunLulus"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="nilaiRata">Nilai Rata-rata Ijazah <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-bar-chart-alt-2'></i>
+                                    <input type="number" id="nilaiRata" name="nilaiRata" placeholder="Contoh: 85.50" min="0" max="100" step="0.01" required>
+                                </div>
+                                <span class="form-error" id="err-nilaiRata"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="prodiPilihan1">Program Pendidikan Pilihan 1 <span>*</span></label>
+                            <div class="input-wrapper">
+                                <i class='bx bx-graduation'></i>
+                                <select id="prodiPilihan1" name="prodiPilihan1" required>
+                                    <option value="">-- Pilih Program Pendidikan Utama --</option>
+                                    <option>Tahfidz Al-Qur'an</option>
+                                    <option>Dirosah Islamiyah</option>
+                                    <option>Bahasa Arab</option>
+                                    <option>Program I'dad (Persiapan)</option>
+                                    <option>Pengkaderan Da'i</option>
+                                    <option>Tahfidz Bersanad</option>
+                                </select>
+                            </div>
+                            <span class="form-error" id="err-prodiPilihan1"></span>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="prodiPilihan2">Program Pendidikan Pilihan 2 <small>(opsional)</small></label>
+                            <div class="input-wrapper">
+                                <i class='bx bx-graduation'></i>
+                                <select id="prodiPilihan2" name="prodiPilihan2">
+                                    <option value="">-- Pilih Program Pendidikan Cadangan --</option>
+                                    <option>Tahfidz Al-Qur'an</option>
+                                    <option>Dirosah Islamiyah</option>
+                                    <option>Bahasa Arab</option>
+                                    <option>Program I'dad (Persiapan)</option>
+                                    <option>Pengkaderan Da'i</option>
+                                    <option>Tahfidz Bersanad</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Jalur Masuk -->
+                        <div class="form-group full">
+                            <label>Jalur Masuk <span>*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-card">
+                                    <input type="radio" name="jalurMasuk" value="reguler" required>
+                                    <div class="radio-body">
+                                        <i class='bx bx-edit'></i>
+                                        <strong>Reguler</strong>
+                                        <span>Tes seleksi tertulis</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="jalurMasuk" value="prestasi">
+                                    <div class="radio-body">
+                                        <i class='bx bx-trophy'></i>
+                                        <strong>Prestasi</strong>
+                                        <span>Nilai rapor / lomba</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="jalurMasuk" value="transfer">
+                                    <div class="radio-body">
+                                        <i class='bx bx-transfer'></i>
+                                        <strong>Transfer</strong>
+                                        <span>Pindah dari Pesantren lain</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="jalurMasuk" value="beasiswa">
+                                    <div class="radio-body">
+                                        <i class='bx bx-star'></i>
+                                        <strong>Beasiswa</strong>
+                                        <span>Ajukan beasiswa</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <span class="form-error" id="err-jalurMasuk"></span>
+                        </div>
+
+                        <!-- Upload Dokumen -->
+                        <div class="docs-section">
+                            <h4><i class='bx bx-file'></i> Upload Dokumen</h4>
+                            <p>Format: PDF / JPG / PNG. Ukuran maks. 2MB per file.</p>
+                            <div class="docs-grid">
+                                <div class="doc-item">
+                                    <label for="fotoKtp">
+                                        <i class='bx bx-id-card'></i>
+                                        <span>Scan KTP / KK</span>
+                                        <small>Wajib</small>
+                                    </label>
+                                    <input type="file" id="fotoKtp" name="fotoKtp" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                                <div class="doc-item">
+                                    <label for="fotoIjazah">
+                                        <i class='bx bxs-graduation'></i>
+                                        <span>Scan Ijazah / SKL</span>
+                                        <small>Wajib</small>
+                                    </label>
+                                    <input type="file" id="fotoIjazah" name="fotoIjazah" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                                <div class="doc-item">
+                                    <label for="fotoRapor">
+                                        <i class='bx bx-book-bookmark'></i>
+                                        <span>Rapor Semester Akhir</span>
+                                        <small>Wajib</small>
+                                    </label>
+                                    <input type="file" id="fotoRapor" name="fotoRapor" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                                <div class="doc-item">
+                                    <label for="fotoPas">
+                                        <i class='bx bx-camera'></i>
+                                        <span>Pas Foto 3×4</span>
+                                        <small>Wajib · latar biru</small>
+                                    </label>
+                                    <input type="file" id="fotoPas" name="fotoPas" accept=".jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="motivasi">Motivasi Mendaftar <span>*</span></label>
+                            <div class="input-wrapper">
+                                <i class='bx bx-message-square-detail'></i>
+                                <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan mengapa Anda memilih MHQ dan apa tujuan akademik Anda..." required></textarea>
+                            </div>
+                            <span class="form-error" id="err-motivasi"></span>
+                        </div>
+
+                        <div class="step-nav">
+                            <button type="button" class="btn btn-ghost" id="toStep1">
+                                <i class='bx bx-left-arrow-alt'></i> Kembali
+                            </button>
+                            <button type="button" class="btn btn-primary" id="toStep3">
+                                Selanjutnya <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ======== STEP 3: KONFIRMASI ======== -->
+                    <div class="form-step" id="step3">
+                        <div class="step-header">
+                            <h2><i class='bx bx-check-shield'></i> Konfirmasi Data</h2>
+                            <p>Periksa kembali data Anda sebelum mengirim pendaftaran.</p>
+                        </div>
+
+                        <div class="summary-card" id="summaryCard">
+                            <!-- Diisi oleh JS -->
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <span>Saya menyatakan bahwa data yang diisi adalah <strong>benar dan dapat dipertanggungjawabkan</strong>. Saya menyetujui <a href="#">syarat & ketentuan</a> pendaftaran MHQ.</span>
+                            </label>
+                            <span class="form-error" id="err-agreeTerms"></span>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreePrivacy" name="agreePrivacy" required>
+                                <span>Saya menyetujui <a href="#">kebijakan privasi</a> MHQ terkait penggunaan data pribadi saya.</span>
+                            </label>
+                            <span class="form-error" id="err-agreePrivacy"></span>
+                        </div>
+
+                        <div class="step-nav">
+                            <button type="button" class="btn btn-ghost" id="backToStep2">
+                                <i class='bx bx-left-arrow-alt'></i> Kembali
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                                <i class='bx bx-send'></i> Kirim Pendaftaran
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- ======== SUCCESS STATE ======== -->
+                <div class="success-screen" id="successScreen" style="display:none">
+                    <div class="success-icon">
+                        <i class='bx bxs-check-circle'></i>
+                    </div>
+                    <h2>Pendaftaran Berhasil Dikirim!</h2>
+                    <p>Terima kasih, <strong id="successName"></strong>! Formulir pendaftaran Anda telah kami terima.</p>
+
+                    <div class="success-info">
+                        <div class="success-info-item">
+                            <i class='bx bx-hash'></i>
+                            <div>
+                                <strong>Nomor Pendaftaran</strong>
+                                <span id="regNumber"></span>
+                            </div>
+                        </div>
+                        <div class="success-info-item">
+                            <i class='bx bx-calendar'></i>
+                            <div>
+                                <strong>Tanggal Daftar</strong>
+                                <span id="regDate"></span>
+                            </div>
+                        </div>
+                        <div class="success-info-item">
+                            <i class='bx bx-time'></i>
+                            <div>
+                                <strong>Proses Verifikasi</strong>
+                                <span>3–5 hari kerja</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-steps">
+                        <h4>Langkah Selanjutnya:</h4>
+                        <div class="next-steps">
+                            <div class="next-step">
+                                <div class="next-step-num">1</div>
+                                <div>
+                                    <strong>Cek Email</strong>
+                                    <p>Kami akan kirim konfirmasi & nomor pendaftaran ke email Anda</p>
+                                </div>
+                            </div>
+                            <div class="next-step">
+                                <div class="next-step-num">2</div>
+                                <div>
+                                    <strong>Bayar Biaya Pendaftaran</strong>
+                                    <p>Transfer Rp 150.000 ke rekening BRI: <strong>1234-5678-9012</strong> a/n MHQ</p>
+                                </div>
+                            </div>
+                            <div class="next-step">
+                                <div class="next-step-num">3</div>
+                                <div>
+                                    <strong>Ikuti Seleksi</strong>
+                                    <p>Jadwal tes/wawancara akan diinformasikan via WhatsApp</p>
+                                </div>
+                            </div>
+                            <div class="next-step">
+                                <div class="next-step-num">4</div>
+                                <div>
+                                    <strong>Pengumuman Hasil</strong>
+                                    <p>Hasil seleksi diumumkan dalam 7 hari kerja setelah tes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class='bx bx-home'></i> Kembali ke Beranda
+                        </a>
+                        <button class="btn btn-ghost" onclick="window.print()">
+                            <i class='bx bx-printer'></i> Cetak Bukti
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ---- SIDEBAR ---- -->
+            <aside class="daftar-sidebar">
+
+                <div class="sidebar-card">
+                    <h4><i class='bx bx-info-circle'></i> Persyaratan Umum</h4>
+                    <ul class="req-list">
+                        <li><i class='bx bx-check'></i> Lulusan SD/MI sederajat (untuk jenjang SMP)</li>
+                        <li><i class='bx bx-check'></i> Lulusan SMP/MTs sederajat (untuk jenjang SMA)</li>
+                        <li><i class='bx bx-check'></i> Nilai rata-rata ijazah minimal 70,00</li>
+                        <li><i class='bx bx-check'></i> Berbadan sehat jasmani & rohani</li>
+                        <li><i class='bx bx-check'></i> Lancar membaca Al-Qur'an (diutamakan)</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h4><i class='bx bx-file'></i> Dokumen yang Diperlukan</h4>
+                    <ul class="req-list">
+                        <li><i class='bx bx-check'></i> Fotokopi KTP/KK (scan)</li>
+                        <li><i class='bx bx-check'></i> Ijazah / Surat Keterangan Lulus</li>
+                        <li><i class='bx bx-check'></i> Rapor 3 semester terakhir</li>
+                        <li><i class='bx bx-check'></i> Pas foto 3×4 (latar biru, 2 lembar)</li>
+                        <li><i class='bx bx-check'></i> Bukti pembayaran biaya pendaftaran</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card sidebar-card-prodi">
+                    <h4><i class='bx bx-graduation'></i> Program Pendidikan</h4>
+                    <div class="prodi-list">
+                        <div class="prodi-item">
+                            <span class="prodi-badge s1">Inti</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+                        <div class="prodi-item">
+                            <span class="prodi-badge s1">Inti</span>
+                            <span>Sistem Informasi</span>
+                        </div>
+                        <div class="prodi-item">
+                            <span class="prodi-badge s1">Inti</span>
+                            <span>Teknik Jaringan</span>
+                        </div>
+                        <div class="prodi-item">
+                            <span class="prodi-badge d4">Dasar</span>
+                            <span>Manajemen Informatika</span>
+                        </div>
+                        <div class="prodi-item">
+                            <span class="prodi-badge d3">Lanjut</span>
+                            <span>Rekayasa Perangkat Lunak</span>
+                        </div>
+                        <div class="prodi-item">
+                            <span class="prodi-badge s2">Khusus</span>
+                            <span>Magister Teknologi Informasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card sidebar-card-contact">
+                    <h4><i class='bx bx-headphone'></i> Butuh Bantuan?</h4>
+                    <p>Tim kami siap membantu Anda melalui:</p>
+                    <a href="https://wa.me/6281234567890" class="btn-wa" target="_blank">
+                        <i class='bx bxl-whatsapp'></i> Chat via WhatsApp
+                    </a>
+                    <a href="tel:+62211234567" class="btn-call">
+                        <i class='bx bx-phone'></i> (021) 1234-5678
+                    </a>
+                    <p class="office-hours"><i class='bx bx-time'></i> Senin–Jumat, 08.00–16.00 WIB</p>
+                </div>
+
+            </aside>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo MHQ" class="footer-logo-img">
+                        <span>MHQ</span>
+                    </a>
+                    <p>Ma'had Hamalatul Qur'an berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="index.html#about"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="index.html#facilities"><i class='bx bx-chevron-right'></i> Fasilitas</a></li>
+                        <li><a href="index.html#contact"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Dirosah Islamiyah</a></li>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Bahasa Arab</a></li>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Program I'dad</a></li>
+                        <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Pengkaderan Da'i</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><i class='bx bxs-map'></i> Karawang, Jawa Barat</li>
+                        <li><i class='bx bxs-phone'></i> (021) 1234-5678</li>
+                        <li><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</li>
+                        <li><i class='bx bxs-envelope'></i> info@MHQ.ac.id</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Ma'had Hamalatul Qur'an. Hak Cipta Dilindungi.</p>
+                <p>Dibuat dengan <i class='bx bxs-heart'></i> untuk pendidikan Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/daftar.js"></script>
+</body>
+</html>
+
