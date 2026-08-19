@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kumpulan Berita dan Artikel Ma'had Hamalatul Qur'an">
-    <title>Semua Berita - MHQ</title>
+    <meta name="description" content="Kumpulan Berita dan Artikel Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title>Semua Berita - STAIHA</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .page-hero-berita {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            padding: 120px 0 60px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(27,94,32,0.85) 100%), url('img/hero-bg.png') center/cover no-repeat;
+            padding: 140px 0 70px;
             text-align: center;
             color: var(--white);
             position: relative;
@@ -85,28 +85,39 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar scrolled">
+    <nav class="navbar scrolled" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <img src="img/logo-clean.png" alt="Logo MHQ" class="logo-img">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
                 </div>
                 <div class="logo-text">
-                    <span class="logo-main">MHQ</span>
-                    <span class="logo-sub">Ma'had Hamalatul Qur'an</span>
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
                 </div>
             </a>
-            <ul class="nav-links">
+
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link active">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
                 <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
             </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <header class="page-hero-berita">
         <div class="container">
             <h1>Kumpulan Berita & Artikel</h1>
-            <p>Update terbaru seputar kegiatan ma'had, kajian Islam, dan informasi pendaftaran.</p>
+            <p>Update terbaru seputar kegiatan kampus STAIHA, kajian Islam, dan informasi pendaftaran PMB.</p>
         </div>
     </header>
 
@@ -128,27 +139,62 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <div class="footer-logo">
-                    <div class="logo-icon">
-                        <img src="img/logo-clean.png" alt="Logo MHQ" class="footer-logo-img">
-                    </div>
-                    <div>
-                        <span>MHQ</span>
-                        <h4>Ma'had Hamalatul Qur'an</h4>
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
+                    </a>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
                     </div>
                 </div>
-                <p>Ma'had Hamalatul Qur'an berkomitmen mencetak generasi unggul dan berkarakter islami melalui pendidikan tahfidz berkualitas.</p>
+
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="program.html"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="berita.html"><i class='bx bx-chevron-right'></i> Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="program.html#tahfidz"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="program.html#sistem-informasi"><i class='bx bx-chevron-right'></i> Sistem Informasi</a></li>
+                        <li><a href="program.html#teknik-jaringan"><i class='bx bx-chevron-right'></i> Teknik Jaringan</a></li>
+                        <li><a href="program.html#manajemen-informatika"><i class='bx bx-chevron-right'></i> Manajemen Informatika</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Ma'had Hamalatul Qur'an. Hak Cipta Dilindungi.</p>
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script src="js/berita.js"></script>
 </body>
 </html>

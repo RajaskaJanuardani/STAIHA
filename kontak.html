@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Kami - Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title>Kontak Kami - STAIHA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero-kontak {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(27,94,32,0.85) 100%), url('img/hero-bg.png') center/cover no-repeat;
+            padding: 140px 0 70px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .page-hero-kontak h1 { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
+        .page-hero-kontak p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <header class="page-hero-kontak">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p>Ada pertanyaan tentang pendaftaran atau program studi? Tim kami siap membantu Anda 24/7.</p>
+        </div>
+    </header>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section class="contact section" id="contact" style="background: var(--white);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-left">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-map'></i></div>
+                        <div>
+                            <h4>Alamat Kampus</h4>
+                            <p>Jl. Pendidikan Raya No. 123, Karawang<br>Jawa Barat 41311</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-phone'></i></div>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>(0267) 1234-5678</p>
+                            <p>+62 812-3456-7890 (WhatsApp)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-envelope'></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@staiha.ac.id</p>
+                            <p>pendaftaran@staiha.ac.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class='bx bxs-time'></i></div>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin – Jumat: 08.00 – 16.00 WIB</p>
+                            <p>Sabtu: 08.00 – 12.00 WIB</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-right">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h3>Kirim Pesan</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">No. Telepon <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx" required>
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="program">Program Pendidikan yang Diminati</label>
+                            <select id="program" name="program">
+                                <option value="">-- Pilih Program Pendidikan --</option>
+                                <option>Tahfidz Al-Qur'an 30 Juz</option>
+                                <option>S1 Sistem Informasi</option>
+                                <option>S1 Teknik Jaringan</option>
+                                <option>D4 Manajemen Informatika</option>
+                                <option>D3 Rekayasa Perangkat Lunak</option>
+                                <option>S2 Magister Teknologi Informasi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan <span>*</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tuliskan pertanyaan atau pesan Anda..." required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class='bx bx-send'></i> Kirim Pesan
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" style="display:none">
+                        <i class='bx bxs-check-circle'></i>
+                        <h4>Pesan Berhasil Dikirim!</h4>
+                        <p>Terima kasih telah menghubungi kami. Tim kami akan segera menghubungi Anda dalam 1x24 jam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-wrapper animate-up" style="margin-top: 50px;">
+                <div class="map-placeholder">
+                    <i class='bx bxs-map-pin'></i>
+                    <h4>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)</h4>
+                    <p>Jl. Pendidikan Raya No. 123, Karawang, Jawa Barat</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary">
+                        <i class='bx bx-map'></i> Buka di Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
+                    </a>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="program.html"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="berita.html"><i class='bx bx-chevron-right'></i> Berita</a></li>
+                        <li><a href="kontak.html"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="program.html#tahfidz"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="program.html#sistem-informasi"><i class='bx bx-chevron-right'></i> Sistem Informasi</a></li>
+                        <li><a href="program.html#teknik-jaringan"><i class='bx bx-chevron-right'></i> Teknik Jaringan</a></li>
+                        <li><a href="program.html#manajemen-informatika"><i class='bx bx-chevron-right'></i> Manajemen Informatika</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

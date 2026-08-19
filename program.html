@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail Program Studi dan Pendidikan - Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title>Program Pendidikan - STAIHA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero-program {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(27,94,32,0.85) 100%), url('img/hero-bg.png') center/cover no-repeat;
+            padding: 140px 0 70px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .page-hero-program h1 { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
+        .page-hero-program p { color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto; font-size: 1.05rem; }
+
+        .program-detail-section {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+
+        .program-detail-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+        .program-detail-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .program-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .program-title-group h2 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .program-badge-level {
+            display: inline-block;
+            background: rgba(46, 125, 50, 0.1);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+        }
+
+        .program-accreditation {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .program-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .info-box {
+            background: var(--gray-100);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+        }
+
+        .info-box h4 {
+            font-size: 1.05rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            color: var(--text);
+        }
+
+        .info-box ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .program-action {
+            margin-top: 28px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .program-detail-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link active">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero-program">
+        <div class="container">
+            <h1>Program Studi & Pendidikan</h1>
+            <p>Pilih program studi unggulan di STAIHA yang memadukan keilmuan Islam, Tahfidz Al-Qur'an, dan Keterampilan Digital Modern.</p>
+        </div>
+    </section>
+
+    <!-- ===================== DETAIL PROGRAM ===================== -->
+    <section class="program-detail-section">
+        <div class="container">
+
+            <!-- PROGRAM 1 -->
+            <div class="program-detail-card" id="tahfidz">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Program Unggulan</span>
+                        <h2>Tahfidz Al-Qur'an 30 Juz (Bersanad)</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                </div>
+                <p>Program khusus yang dirancang untuk mencetak hafiz dan hafizah Al-Qur'an 30 juz yang mutqin dan bersanad hingga Rasulullah SAW, dibekali dengan pemahaman tafsir dan ilmu qira'at.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-book-open'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Tahsin & Bimbingan Makhorijul Huruf</li>
+                            <li>Setoran Hafalan Ziyadah & Muroja'ah Matan</li>
+                            <li>Ilmu Qira'at Mutawatirah</li>
+                            <li>Tafsir & Asbabun Nuzul</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir & Alumni</h4>
+                        <ul>
+                            <li>Pengajar / Ustadz Tahfidz Lembaga Al-Qur'an</li>
+                            <li>Imam Masjid Agung & Da'i Internasional</li>
+                            <li>Peneliti & Penulis Literatur Qur'ani</li>
+                            <li>Penerima Beasiswa Lanjutan ke Timur Tengah</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+            <!-- PROGRAM 2 -->
+            <div class="program-detail-card" id="sistem-informasi">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Sarjana (S1)</span>
+                        <h2>Sistem Informasi</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                </div>
+                <p>Membekali mahasiswa dengan kemampuan merancang, mengintegrasikan, dan mengelola sistem informasi bisnis modern serta arsitektur data perusahaan.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-code-alt'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Business Analytics & Big Data</li>
+                            <li>Enterprise Resource Planning (ERP)</li>
+                            <li>Database Architecture & Management</li>
+                            <li>UI/UX Design & User Experience</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir</h4>
+                        <ul>
+                            <li>System Analyst & IT Business Partner</li>
+                            <li>Data Analyst & Business Intelligence Specialist</li>
+                            <li>ERP Consultant & Project Manager</li>
+                            <li>IT Governance Officer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+            <!-- PROGRAM 3 -->
+            <div class="program-detail-card" id="teknik-jaringan">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Sarjana (S1)</span>
+                        <h2>Teknik Jaringan & Keamanan Siber</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi B</span>
+                </div>
+                <p>Fokus pada pengelolaan infrastruktur jaringan komputer berskala besar, komputasi awan (Cloud Computing), serta proteksi keamanan siber informasi.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-network-chart'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Network Architecture (Cisco/MikroTik)</li>
+                            <li>Cloud Infrastructure (AWS/Google Cloud)</li>
+                            <li>Cyber Security & Ethical Hacking</li>
+                            <li>Internet of Things (IoT)</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir</h4>
+                        <ul>
+                            <li>Network Engineer & System Administrator</li>
+                            <li>Cyber Security Specialist / Analyst</li>
+                            <li>Cloud Solution Architect</li>
+                            <li>DevOps Engineer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+            <!-- PROGRAM 4 -->
+            <div class="program-detail-card" id="manajemen-informatika">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Sarjana Terapan (D4)</span>
+                        <h2>Manajemen Informatika</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                </div>
+                <p>Kombinasi ilmu manajemen bisnis, e-commerce, dan teknologi informasi praktis untuk melahirkan pemimpin digital abad ke-21.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-stats'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Digital Marketing & E-Commerce Strategy</li>
+                            <li>IT Project Management (Agile & Scrum)</li>
+                            <li>Financial Technology (Fintech)</li>
+                            <li>Technopreneurship & Startup Creation</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir</h4>
+                        <ul>
+                            <li>Digital Marketing Manager</li>
+                            <li>IT Project Manager</li>
+                            <li>Digital Business Entrepreneur</li>
+                            <li>E-Commerce Specialist</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+            <!-- PROGRAM 5 -->
+            <div class="program-detail-card" id="rekayasa-perangkat-lunak">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Diploma (D3)</span>
+                        <h2>Rekayasa Perangkat Lunak (RPL)</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi B</span>
+                </div>
+                <p>Program vokasi siap kerja yang menitikberatkan pada keahlian praktis pengembangan perangkat lunak berbasis Web, Mobile (Android/iOS), dan Desktop.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-laptop'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Fullstack Web Development (Frontend & Backend)</li>
+                            <li>Mobile App Development (Flutter/React Native)</li>
+                            <li>API Design & Web Services</li>
+                            <li>Software Testing & Quality Assurance</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir</h4>
+                        <ul>
+                            <li>Fullstack Web Developer</li>
+                            <li>Mobile Application Developer</li>
+                            <li>Software QA Engineer</li>
+                            <li>Frontend / Backend Developer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+            <!-- PROGRAM 6 -->
+            <div class="program-detail-card" id="magister-ti">
+                <div class="program-header-flex">
+                    <div class="program-title-group">
+                        <span class="program-badge-level">Pascasarjana (S2)</span>
+                        <h2>Magister Teknologi Informasi</h2>
+                    </div>
+                    <span class="program-accreditation"><i class='bx bxs-badge-check'></i> Akreditasi A</span>
+                </div>
+                <p>Program pascasarjana untuk akademisi, praktisi, dan manajer yang ingin mendalami riset tingkat lanjut di bidang Kecerdasan Buatan (AI) dan Inovasi Teknologi.</p>
+
+                <div class="program-info-grid">
+                    <div class="info-box">
+                        <h4><i class='bx bx-brain'></i> Kurikulum Utama</h4>
+                        <ul>
+                            <li>Advanced AI & Machine Learning Research</li>
+                            <li>Big Data Infrastructure & Analytics</li>
+                            <li>Methodology & Scientific Publication</li>
+                            <li>Strategic IT Leadership</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4><i class='bx bx-briefcase'></i> Prospek Karir</h4>
+                        <ul>
+                            <li>Dosen & Peneliti Utama</li>
+                            <li>Chief Technology Officer (CTO)</li>
+                            <li>Lead AI Engineer & Data Scientist</li>
+                            <li>Konsultan Strategic IT</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-action">
+                    <a href="daftar.html" class="btn btn-primary"><i class='bx bxs-user-plus'></i> Daftar Program Ini</a>
+                    <a href="kontak.html" class="btn btn-outline"><i class='bx bx-help-circle'></i> Tanya Konsultasi</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
+                    </a>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="program.html"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="kontak.html"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

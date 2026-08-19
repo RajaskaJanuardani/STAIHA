@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil Lengkap, Visi Misi, Sejarah, dan Nilai Utama Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title>Tentang Kami - STAIHA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero-about {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(27,94,32,0.85) 100%), url('img/hero-bg.png') center/cover no-repeat;
+            padding: 140px 0 70px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .page-hero-about h1 { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
+        .page-hero-about p { color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto; font-size: 1.05rem; }
+
+        .about-detail-section { padding: 80px 0; background: var(--white); }
+        .vision-mission-section { padding: 80px 0; background: var(--gray-100); }
+        
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .vm-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary);
+        }
+        .vm-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .vm-card h3 i {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        .vm-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .vm-card ul li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .vm-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(46, 125, 50, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+        }
+        .value-card h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--dark); }
+        .value-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+        .timeline-section { padding: 80px 0; background: var(--white); }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding-left: 30px;
+            border-left: 3px solid var(--primary-light);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 4px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .timeline-title {
+            font-size: 1.15rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .timeline-desc {
+            color: var(--text);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .vm-grid { grid-template-columns: 1fr; }
+            .vm-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link active">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <header class="page-hero-about">
+        <div class="container">
+            <h1>Tentang STAIHA</h1>
+            <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) — Mencetak Generasi Qur'ani, Berakhlak Mulia, dan Unggul dalam Sains & Teknologi Digital.</p>
+        </div>
+    </header>
+
+    <!-- ===================== PROFIL UTAMA ===================== -->
+    <section class="about-detail-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrapper animate-left">
+                    <img src="img/about-img.jpg" alt="Bangunan Kampus STAIHA" loading="lazy">
+                    <div class="about-img-badge">
+                        <i class='bx bxs-award'></i>
+                        <div>
+                            <strong>Terakreditasi BAN-PT</strong>
+                            <span>Perguruan Tinggi Islam Unggulan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content animate-right">
+                    <span class="section-tag">Profil Institusi</span>
+                    <h3>Integrasi Keilmuan Islam & Teknologi Informasi</h3>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) didirikan dengan komitmen luhur untuk memadukan keunggulan hafalan Al-Qur'an (Tahfidz), pemahaman keilmuan Islam yang mendalam, serta penguasaan Sains dan Teknologi Informasi masa kini.</p>
+                    <p>Berdiri di atas lahan seluas 5 hektar yang asri dan kondusif, STAIHA menyediakan ekosistem pendidikan modern yang mendukung mahasiswa berkembang menjadi akademisi, praktisi, dan da'i berjiwa Rahmatan lil 'Alamin.</p>
+
+                    <div class="about-stats" style="margin-top: 30px;">
+                        <div class="stat-item">
+                            <span class="stat-num">30+</span>
+                            <span class="stat-label">Pengajar & Dosen Berpengalaman</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">1.200+</span>
+                            <span class="stat-label">Mahasiswa & Alumni</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Sanad Tahfidz Mutqin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== VISI & MISI ===================== -->
+    <section class="vision-mission-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Arah & Tujuan</span>
+                <h2 class="section-title">Visi & Misi Kampus</h2>
+                <p class="section-desc">Panduan strategis STAIHA dalam mewujudkan pendidikan tinggi Islam yang berkualitas dan berdaya saing global.</p>
+            </div>
+
+            <div class="vm-grid">
+                <div class="vm-card animate-left">
+                    <h3><i class='bx bxs-target-lock'></i> Visi Institusi</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: var(--dark); font-weight: 500; margin-top: 10px;">
+                        "Menjadi Perguruan Tinggi Agama Islam Terkemuka di Asia Tenggara pada Tahun 2030 dalam Mengintegrasikan Keilmuan Al-Qur'an, Sains, dan Teknologi Informasi untuk Kemaslahatan Umat."
+                    </p>
+                </div>
+
+                <div class="vm-card animate-right">
+                    <h3><i class='bx bxs-paper-plane'></i> Misi Utama</h3>
+                    <ul>
+                        <li>Menyelenggarakan pendidikan & pengajaran tinggi Islam berbasis Al-Qur'an yang dipadukan dengan kurikulum teknologi modern.</li>
+                        <li>Melaksanakan penelitian dan kajian ilmiah yang inovatif dalam bidang Studi Islam, Al-Qur'an, dan Sistem Informasi.</li>
+                        <li>Mengembangkan program Tahfidz Al-Qur'an 30 Juz bersanad yang mutqin bagi seluruh civitas akademika.</li>
+                        <li>Menjalin kemitraan strategis dengan perguruan tinggi nasional dan internasional serta dunia industri.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== NILAI-NILAI UTAMA ===================== -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Prinsip & Budaya</span>
+                <h2 class="section-title">Nilai-Nilai Utama STAIHA</h2>
+                <p class="section-desc">Empat pilar utama yang menjadi pondasi karakter seluruh civitas akademika STAIHA.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card animate-up">
+                    <div class="value-icon"><i class='bx bxs-book-heart'></i></div>
+                    <h4>Qur'ani</h4>
+                    <p>Menjadikan Al-Qur'an dan As-Sunnah sebagai pedoman utama dalam berpikir, berperilaku, dan berkarya.</p>
+                </div>
+
+                <div class="value-card animate-up" style="animation-delay:0.1s">
+                    <div class="value-icon"><i class='bx bxs-graduation'></i></div>
+                    <h4>Akademik Unggul</h4>
+                    <p>Menjunjung tinggi tradisi keilmuan, ketelitian riset, dan standar integritas akademik yang tinggi.</p>
+                </div>
+
+                <div class="value-card animate-up" style="animation-delay:0.2s">
+                    <div class="value-icon"><i class='bx bxs-chip'></i></div>
+                    <h4>Inovatif Digital</h4>
+                    <p>Kreatif memanfaatkan teknologi informasi terbaru untuk kemajuan dakwah, bisnis, dan masyarakat.</p>
+                </div>
+
+                <div class="value-card animate-up" style="animation-delay:0.3s">
+                    <div class="value-icon"><i class='bx bxs-group'></i></div>
+                    <h4>Akhlakul Karimah</h4>
+                    <p>Mengedepankan etika, kesantunan, kedisiplinan, serta semangat khidmat kepada umat dan bangsa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SEJARAH & JEJAK LENGKAP ===================== -->
+    <section class="timeline-section" style="background: var(--gray-100);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perjalanan Perjuangan</span>
+                <h2 class="section-title">Sejarah & Perkembangan STAIHA</h2>
+                <p class="section-desc">Langkah demi langkah komitmen STAIHA dalam memberikan kontribusi nyata bagi pendidikan Indonesia.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-title">Pendirian Lembaga Tahfidz & Dirosah</div>
+                    <div class="timeline-desc">Diawali dengan pendirian Ma'had Tahfidz Al-Qur'an khusus pembinaan hafiz bersanad dan studi keislaman intensif.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-title">Transformasi Menjadi STAIHA</div>
+                    <div class="timeline-desc">Resmi memperoleh ijin operasional kementerian untuk menyelenggarakan program sarjana tinggi dengan kombinasi prodi keagamaan dan teknologi.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-title">Pembangunan Kampus Terpadu & Lab Digital</div>
+                    <div class="timeline-desc">Perluasan area kampus, peresmian Laboratorium Komputer Modern, Perpustakaan Digital, dan Asrama Mahasiswa.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2026 - Sekarang</div>
+                    <div class="timeline-title">Pengembangan Pascasarjana & Kemitraan Global</div>
+                    <div class="timeline-desc">Membuka program Pascasarjana S2 Magister Teknologi Informasi dan menjalin kerjasama pertukaran mahasiswa tingkat internasional.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA BANNER ===================== -->
+    <section class="cta section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Menjadi Bagian dari Generasi Unggul STAIHA?</h2>
+                <p>Pendaftaran Mahasiswa Baru (PMB) Tahun Akademik 2026/2027 telah dibuka. Dapatkan peluang beasiswa dan pendidikan terbaik!</p>
+                <div class="cta-btns">
+                    <a href="daftar.html" class="btn btn-white">
+                        <i class='bx bxs-user-plus'></i> Daftar PMB Sekarang
+                    </a>
+                    <a href="kontak.html" class="btn btn-outline-white">
+                        <i class='bx bx-phone'></i> Hubungi Tim PMB
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
+                    </a>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="program.html"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="berita.html"><i class='bx bx-chevron-right'></i> Berita</a></li>
+                        <li><a href="kontak.html"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="program.html#tahfidz"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="program.html#sistem-informasi"><i class='bx bx-chevron-right'></i> Sistem Informasi</a></li>
+                        <li><a href="program.html#teknik-jaringan"><i class='bx bx-chevron-right'></i> Teknik Jaringan</a></li>
+                        <li><a href="program.html#manajemen-informatika"><i class='bx bx-chevron-right'></i> Manajemen Informatika</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

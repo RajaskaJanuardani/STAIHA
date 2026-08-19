@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail Berita dan Informasi Kampus - Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title id="page-title">Detail Berita - STAIHA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero-berita-detail {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(27,94,32,0.85) 100%), url('img/hero-bg.png') center/cover no-repeat;
+            padding: 130px 0 50px;
+            color: var(--white);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 16px;
+        }
+        .breadcrumb a { color: rgba(255,255,255,0.9); transition: var(--transition); }
+        .breadcrumb a:hover { color: var(--white); text-decoration: underline; }
+
+        .article-section {
+            padding: 70px 0;
+            background: var(--gray-100);
+        }
+
+        .article-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 40px;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(46, 125, 50, 0.1);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--dark);
+            line-height: 1.35;
+            margin-bottom: 20px;
+            font-family: var(--font-primary);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-featured-img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 30px;
+        }
+
+        .article-body-text {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: var(--text);
+        }
+
+        .article-body-text p {
+            margin-bottom: 20px;
+        }
+
+        .article-body-text blockquote {
+            background: var(--gray-100);
+            border-left: 4px solid var(--primary);
+            padding: 20px 24px;
+            font-style: italic;
+            margin: 30px 0;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            color: var(--dark);
+        }
+
+        .article-share {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .article-share span {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        .share-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        .share-wa { background: #25D366; }
+        .share-fb { background: #1877F2; }
+        .share-tw { background: #1DA1F2; }
+        .share-btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.15rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            font-weight: 700;
+        }
+
+        .recent-post-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .recent-post-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .recent-post-img {
+            width: 70px;
+            height: 70px;
+            border-radius: var(--radius-sm);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .recent-post-info h5 {
+            font-size: 0.9rem;
+            line-height: 1.35;
+            margin-bottom: 6px;
+        }
+
+        .recent-post-info h5 a {
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        .recent-post-info h5 a:hover {
+            color: var(--primary);
+        }
+
+        .recent-post-date {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .cta-widget {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            text-align: center;
+        }
+        .cta-widget h4 { font-size: 1.2rem; margin-bottom: 10px; }
+        .cta-widget p { font-size: 0.88rem; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+
+        @media (max-width: 992px) {
+            .article-layout { grid-template-columns: 1fr; }
+            .article-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link active">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="daftar.html" class="nav-btn">Daftar Sekarang</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HEADER / BREADCRUMB ===================== -->
+    <header class="page-hero-berita-detail">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Beranda</a>
+                <i class='bx bx-chevron-right'></i>
+                <a href="berita.html">Berita</a>
+                <i class='bx bx-chevron-right'></i>
+                <span id="breadcrumb-title">Detail Berita</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== DETAIL BERITA ===================== -->
+    <section class="article-section">
+        <div class="container">
+            <div class="article-layout">
+                
+                <!-- Main Article Content -->
+                <main class="article-card">
+                    <span class="article-category" id="news-category">Kategori</span>
+                    <h1 class="article-title" id="news-title">Judul Berita Memuat...</h1>
+                    
+                    <div class="article-meta">
+                        <div class="article-meta-item">
+                            <i class='bx bx-calendar'></i>
+                            <span id="news-date">15 Agustus 2026</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class='bx bx-user'></i>
+                            <span id="news-author">Humas STAIHA</span>
+                        </div>
+                        <div class="article-meta-item">
+                            <i class='bx bx-show'></i>
+                            <span>1.420 Pembaca</span>
+                        </div>
+                    </div>
+
+                    <img src="" alt="Foto Berita" class="article-featured-img" id="news-image">
+
+                    <div class="article-body-text" id="news-full-content">
+                        <!-- Content will be rendered dynamically -->
+                    </div>
+
+                    <div class="article-share">
+                        <span>Bagikan Berita Ini:</span>
+                        <a href="https://api.whatsapp.com/send?text=" target="_blank" id="share-wa" class="share-btn share-wa" title="Bagikan ke WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" id="share-fb" class="share-btn share-fb" title="Bagikan ke Facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=" target="_blank" id="share-tw" class="share-btn share-tw" title="Bagikan ke Twitter"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Recent News Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Berita Terbaru Lainnya</h4>
+                        <div id="recent-news-list">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- PMB Banner Widget -->
+                    <div class="sidebar-widget cta-widget">
+                        <h4>Penerimaan Mahasiswa Baru</h4>
+                        <p>Daftarkan diri Anda sekarang dan raih beasiswa pendidikan di STAIHA.</p>
+                        <a href="daftar.html" class="btn btn-white"><i class='bx bxs-user-plus'></i> Daftar PMB</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
+                    </a>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="program.html"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
+                        <li><a href="berita.html"><i class='bx bx-chevron-right'></i> Berita</a></li>
+                        <li><a href="kontak.html"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Program Pendidikan</h4>
+                    <ul>
+                        <li><a href="program.html#tahfidz"><i class='bx bx-chevron-right'></i> Tahfidz Al-Qur'an</a></li>
+                        <li><a href="program.html#sistem-informasi"><i class='bx bx-chevron-right'></i> Sistem Informasi</a></li>
+                        <li><a href="program.html#teknik-jaringan"><i class='bx bx-chevron-right'></i> Teknik Jaringan</a></li>
+                        <li><a href="program.html#manajemen-informatika"><i class='bx bx-chevron-right'></i> Manajemen Informatika</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Informasi Kontak</h4>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/berita.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = parseInt(urlParams.get('id')) || 1;
+
+            const currentArticle = newsData.find(item => item.id === articleId) || newsData[0];
+
+            // Render current article details
+            document.title = `${currentArticle.title} - STAIHA`;
+            document.getElementById('breadcrumb-title').innerText = currentArticle.title;
+            document.getElementById('news-category').innerText = currentArticle.category;
+            document.getElementById('news-title').innerText = currentArticle.title;
+            document.getElementById('news-date').innerText = currentArticle.dateFormatted;
+            document.getElementById('news-author').innerText = currentArticle.author;
+            
+            const newsImg = document.getElementById('news-image');
+            newsImg.src = currentArticle.image;
+            newsImg.alt = currentArticle.title;
+
+            document.getElementById('news-full-content').innerHTML = currentArticle.fullContent || `<p>${currentArticle.desc}</p>`;
+
+            // Share links
+            const currentUrl = encodeURIComponent(window.location.href);
+            const shareText = encodeURIComponent(`${currentArticle.title} - STAIHA`);
+            document.getElementById('share-wa').href = `https://api.whatsapp.com/send?text=${shareText}%20${currentUrl}`;
+            document.getElementById('share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+            document.getElementById('share-tw').href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareText}`;
+
+            // Render sidebar recent news
+            const recentContainer = document.getElementById('recent-news-list');
+            if (recentContainer) {
+                const otherArticles = newsData.filter(item => item.id !== currentArticle.id).slice(0, 4);
+                recentContainer.innerHTML = otherArticles.map(item => `
+                    <div class="recent-post-item">
+                        <img src="${item.image}" alt="${item.title}" class="recent-post-img">
+                        <div class="recent-post-info">
+                            <h5><a href="berita-detail.html?id=${item.id}">${item.title}</a></h5>
+                            <span class="recent-post-date"><i class='bx bx-calendar'></i> ${item.dateFormatted}</span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+</body>
+</html>

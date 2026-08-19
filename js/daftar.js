@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Validation Functions ----
     function validateStep1() {
         let isValid = true;
-        const fields = ['namaLengkap', 'nik', 'tempatLahir', 'tanggalLahir', 'jenisKelamin', 'agama', 'alamat', 'noHp', 'emailPribadi', 'namaOrtu', 'hpOrtu'];
+        const fields = ['namaLengkap', 'nik', 'tempatLahir', 'tanggalLahir', 'jenisKelamin', 'alamat', 'noHp', 'emailPribadi', 'namaOrtu', 'hpOrtu'];
         
         fields.forEach(id => {
             const el = document.getElementById(id);

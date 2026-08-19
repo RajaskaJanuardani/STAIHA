@@ -255,13 +255,19 @@ input, textarea, select, button {
     display: block;
 }
 
-.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text { 
+    display: flex; 
+    flex-direction: column; 
+    line-height: 1.2; 
+    white-space: nowrap;
+}
 
 .logo-main {
     font-weight: 800;
     font-size: 1.3rem;
     color: var(--white);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .logo-sub {
@@ -269,6 +275,7 @@ input, textarea, select, button {
     color: rgba(255,255,255,0.7);
     font-weight: 400;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .navbar.scrolled .logo-main { color: var(--primary); }
@@ -277,16 +284,26 @@ input, textarea, select, button {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.nav-menu li {
+    white-space: nowrap;
 }
 
 .nav-link {
-    padding: 8px 14px;
+    display: inline-block;
+    padding: 8px 12px;
     border-radius: var(--radius-sm);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
     color: rgba(255,255,255,0.85);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -303,13 +320,15 @@ input, textarea, select, button {
 }
 
 .nav-btn {
-    padding: 10px 22px;
+    display: inline-block;
+    padding: 9px 20px;
     background: var(--primary-light);
     color: var(--white) !important;
     border-radius: var(--radius-full);
     font-weight: 700;
     font-size: 0.88rem;
     box-shadow: 0 4px 12px rgba(27, 94, 32, 0.45);
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -822,13 +841,17 @@ input, textarea, select, button {
     border-radius: var(--radius-md);
     overflow: hidden;
     cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 
 .facility-card img {
     width: 100%;
-    height: 220px;
+    height: 260px;
     object-fit: cover;
+    object-position: center center;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .facility-card.large {
@@ -836,27 +859,34 @@ input, textarea, select, button {
     grid-row: span 1;
 }
 
-.facility-card.large img { height: 340px; }
+.facility-card.large img { 
+    height: 380px; 
+    object-fit: cover;
+    object-position: center center;
+}
 
 .facility-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.2) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.3) 50%, transparent 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 24px;
     color: var(--white);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 1;
+    transition: background 0.3s ease;
 }
 
-.facility-card:hover .facility-overlay { opacity: 1; }
-.facility-card:hover img { transform: scale(1.05); }
+.facility-card:hover .facility-overlay {
+    background: linear-gradient(to top, rgba(27,94,32,0.92) 0%, rgba(15,23,42,0.4) 60%, transparent 100%);
+}
+
+.facility-card:hover img { transform: scale(1.04); }
 
 .facility-overlay i { font-size: 2rem; color: var(--secondary); margin-bottom: 8px; }
-.facility-overlay h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
-.facility-overlay p { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
+.facility-overlay h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+.facility-overlay p { font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.5; }
 
 /* ============================================================
    DOSEN
@@ -923,6 +953,22 @@ input, textarea, select, button {
 }
 
 .faculty-social a:hover { background: var(--primary); color: var(--white); }
+
+.faculty-avatar-container {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.faculty-avatar-svg {
+    width: 170px;
+    height: 170px;
+}
 
 .faculty-info { padding: 20px; }
 
@@ -1095,12 +1141,97 @@ input, textarea, select, button {
     margin-bottom: 6px;
 }
 
+.news-small h4 a {
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.news-small h4 a:hover {
+    color: var(--primary);
+}
+
 .news-date {
     font-size: 0.78rem;
     color: var(--text-light);
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+/* ============================================================
+   KENAPA PILIH KAMI (WHY US)
+   ============================================================ */
+.why-us {
+    background: linear-gradient(135deg, var(--gray-100) 0%, #edf2f7 100%);
+    padding: 90px 0;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-us-card {
+    background: var(--white);
+    padding: 36px 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border-top: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-us-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--primary);
+}
+
+.why-us-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(46, 125, 50, 0.1);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.why-us-card:hover .why-us-icon {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.why-us-card h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.why-us-card p {
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================================
@@ -1535,6 +1666,21 @@ select {
     line-height: 1.6;
 }
 
+.footer-contact ul li a {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--gray-500);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.footer-contact ul li a:hover {
+    color: var(--secondary);
+    transform: translateX(4px);
+}
+
 .footer-contact ul li i { color: var(--secondary); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
 
 .footer-bottom {
@@ -1601,10 +1747,6 @@ select {
     .faculty-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
     .advantages-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-    .section { padding: 70px 0; }
 
     .hamburger { display: flex; }
 
@@ -1623,6 +1765,7 @@ select {
         transition: left 0.35s cubic-bezier(0.4,0,0.2,1);
         z-index: 999;
         overflow-y: auto;
+        white-space: normal;
     }
 
     .nav-menu.open { left: 0; }
@@ -1643,6 +1786,10 @@ select {
         justify-content: center;
         display: flex;
     }
+}
+
+@media (max-width: 768px) {
+    .section { padding: 70px 0; }
 
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-img-wrapper img { height: 350px; }
@@ -1654,7 +1801,7 @@ select {
 
     .facilities-grid { grid-template-columns: 1fr 1fr; }
     .facility-card.large { grid-column: span 2; }
-    .facility-card.large img { height: 220px; }
+    .facility-card.large img { height: 260px; }
     .facility-overlay { opacity: 1; }
 
     .faculty-grid { grid-template-columns: 1fr 1fr; }

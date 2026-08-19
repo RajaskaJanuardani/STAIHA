@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formulir Pendaftaran Santri Baru - Ma'had Hamalatul Qur'an">
-    <title>Pendaftaran Santri Baru - MHQ</title>
+    <meta name="description" content="Formulir Pendaftaran Mahasiswa Baru (PMB) - Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA)">
+    <title>Pendaftaran Mahasiswa Baru (PMB) - STAIHA</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,20 +25,20 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <img src="img/logo-clean.png" alt="Logo MHQ" class="logo-img">
+                    <img src="img/logo-clean.png" alt="Logo STAIHA" class="logo-img">
                 </div>
                 <div class="logo-text">
-                    <span class="logo-main">MHQ</span>
-                    <span class="logo-sub">Ma'had Hamalatul Qur'an</span>
+                    <span class="logo-main">STAIHA</span>
+                    <span class="logo-sub">Sekolah Tinggi Agama Islam Hamalatul Qur'an</span>
                 </div>
             </a>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
-                <li><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
-                <li><a href="index.html#programs" class="nav-link">Program Pendidikan</a></li>
-                <li><a href="index.html#facilities" class="nav-link">Fasilitas</a></li>
-                <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="program.html" class="nav-link">Program Pendidikan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
                 <li><a href="daftar.html" class="nav-btn active-page">Daftar Sekarang</a></li>
             </ul>
 
@@ -57,10 +57,10 @@
             <div class="breadcrumb">
                 <a href="index.html"><i class='bx bx-home'></i> Beranda</a>
                 <i class='bx bx-chevron-right'></i>
-                <span>Pendaftaran Santri Baru</span>
+                <span>Pendaftaran Mahasiswa Baru</span>
             </div>
-            <h1>Pendaftaran <span class="highlight-green">Santri Baru</span></h1>
-            <p>Tahun Ajaran 2026/2027 — Daftarkan putra Anda dan mulai perjalanan menghafal Al-Qur'an bersama MHQ</p>
+            <h1>Pendaftaran <span class="highlight-green">Mahasiswa Baru (PMB)</span></h1>
+            <p>Tahun Akademik 2026/2027 — Daftarkan diri Anda dan mulai perjalanan akademik berkualitas bersama STAIHA</p>
         </div>
     </section>
 
@@ -182,22 +182,6 @@
                                     </select>
                                 </div>
                                 <span class="form-error" id="err-jenisKelamin"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="agama">Agama <span>*</span></label>
-                                <div class="input-wrapper">
-                                    <i class='bx bx-church'></i>
-                                    <select id="agama" name="agama" required>
-                                        <option value="">-- Pilih Agama --</option>
-                                        <option>Islam</option>
-                                        <option>Kristen Protestan</option>
-                                        <option>Kristen Katolik</option>
-                                        <option>Hindu</option>
-                                        <option>Buddha</option>
-                                        <option>Konghucu</option>
-                                    </select>
-                                </div>
-                                <span class="form-error" id="err-agama"></span>
                             </div>
                         </div>
 
@@ -379,7 +363,7 @@
                                     <div class="radio-body">
                                         <i class='bx bx-transfer'></i>
                                         <strong>Transfer</strong>
-                                        <span>Pindah dari Pesantren lain</span>
+                                        <span>Pindah dari Perguruan Tinggi lain</span>
                                     </div>
                                 </label>
                                 <label class="radio-card">
@@ -438,7 +422,7 @@
                             <label for="motivasi">Motivasi Mendaftar <span>*</span></label>
                             <div class="input-wrapper">
                                 <i class='bx bx-message-square-detail'></i>
-                                <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan mengapa Anda memilih MHQ dan apa tujuan akademik Anda..." required></textarea>
+                                <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan mengapa Anda memilih STAIHA dan apa tujuan akademik Anda..." required></textarea>
                             </div>
                             <span class="form-error" id="err-motivasi"></span>
                         </div>
@@ -467,7 +451,7 @@
                         <div class="form-group full">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                                <span>Saya menyatakan bahwa data yang diisi adalah <strong>benar dan dapat dipertanggungjawabkan</strong>. Saya menyetujui <a href="#">syarat & ketentuan</a> pendaftaran MHQ.</span>
+                                <span>Saya menyatakan bahwa data yang diisi adalah <strong>benar dan dapat dipertanggungjawabkan</strong>. Saya menyetujui <a href="#">syarat & ketentuan</a> pendaftaran STAIHA.</span>
                             </label>
                             <span class="form-error" id="err-agreeTerms"></span>
                         </div>
@@ -475,7 +459,7 @@
                         <div class="form-group full">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="agreePrivacy" name="agreePrivacy" required>
-                                <span>Saya menyetujui <a href="#">kebijakan privasi</a> MHQ terkait penggunaan data pribadi saya.</span>
+                                <span>Saya menyetujui <a href="#">kebijakan privasi</a> STAIHA terkait penggunaan data pribadi saya.</span>
                             </label>
                             <span class="form-error" id="err-agreePrivacy"></span>
                         </div>
@@ -538,7 +522,7 @@
                                 <div class="next-step-num">2</div>
                                 <div>
                                     <strong>Bayar Biaya Pendaftaran</strong>
-                                    <p>Transfer Rp 150.000 ke rekening BRI: <strong>1234-5678-9012</strong> a/n MHQ</p>
+                                    <p>Transfer Rp 150.000 ke rekening BRI: <strong>1234-5678-9012</strong> a/n STAIHA</p>
                                 </div>
                             </div>
                             <div class="next-step">
@@ -576,11 +560,11 @@
                 <div class="sidebar-card">
                     <h4><i class='bx bx-info-circle'></i> Persyaratan Umum</h4>
                     <ul class="req-list">
-                        <li><i class='bx bx-check'></i> Lulusan SD/MI sederajat (untuk jenjang SMP)</li>
-                        <li><i class='bx bx-check'></i> Lulusan SMP/MTs sederajat (untuk jenjang SMA)</li>
+                        <li><i class='bx bx-check'></i> Lulusan SMA/MA/SMK atau sederajat</li>
                         <li><i class='bx bx-check'></i> Nilai rata-rata ijazah minimal 70,00</li>
                         <li><i class='bx bx-check'></i> Berbadan sehat jasmani & rohani</li>
-                        <li><i class='bx bx-check'></i> Lancar membaca Al-Qur'an (diutamakan)</li>
+                        <li><i class='bx bx-check'></i> Memiliki motivasi belajar tinggi</li>
+                        <li><i class='bx bx-check'></i> Memenuhi kelengkapan berkas pendaftaran</li>
                     </ul>
                 </div>
 
@@ -647,10 +631,10 @@
             <div class="container footer-grid">
                 <div class="footer-about">
                     <a href="index.html" class="footer-logo">
-                        <img src="img/logo-clean.png" alt="Logo MHQ" class="footer-logo-img">
-                        <span>MHQ</span>
+                        <img src="img/logo-clean.png" alt="Logo STAIHA" class="footer-logo-img">
+                        <span>STAIHA</span>
                     </a>
-                    <p>Ma'had Hamalatul Qur'an berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
+                    <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA) berkomitmen mencetak generasi unggul dan berkarakter yang siap menghadapi tantangan era digital global.</p>
                     <div class="footer-social">
                         <a href="#"><i class='bx bxl-facebook'></i></a>
                         <a href="#"><i class='bx bxl-instagram'></i></a>
@@ -663,10 +647,10 @@
                     <h4>Tautan Cepat</h4>
                     <ul>
                         <li><a href="index.html"><i class='bx bx-chevron-right'></i> Beranda</a></li>
-                        <li><a href="index.html#about"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
+                        <li><a href="about.html"><i class='bx bx-chevron-right'></i> Tentang Kami</a></li>
                         <li><a href="index.html#programs"><i class='bx bx-chevron-right'></i> Program Pendidikan</a></li>
                         <li><a href="index.html#facilities"><i class='bx bx-chevron-right'></i> Fasilitas</a></li>
-                        <li><a href="index.html#contact"><i class='bx bx-chevron-right'></i> Kontak</a></li>
+                        <li><a href="kontak.html"><i class='bx bx-chevron-right'></i> Kontak</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -682,18 +666,17 @@
                 <div class="footer-contact">
                     <h4>Informasi Kontak</h4>
                     <ul>
-                        <li><i class='bx bxs-map'></i> Karawang, Jawa Barat</li>
-                        <li><i class='bx bxs-phone'></i> (021) 1234-5678</li>
-                        <li><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</li>
-                        <li><i class='bx bxs-envelope'></i> info@MHQ.ac.id</li>
+                        <li><a href="https://maps.google.com/?q=Karawang,+Jawa+Barat" target="_blank"><i class='bx bxs-map'></i> Karawang, Jawa Barat</a></li>
+                        <li><a href="tel:+6226712345678"><i class='bx bxs-phone'></i> (0267) 1234-5678</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank"><i class='bx bxl-whatsapp'></i> +62 812-3456-7890</a></li>
+                        <li><a href="mailto:info@staiha.ac.id"><i class='bx bxs-envelope'></i> info@staiha.ac.id</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Ma'had Hamalatul Qur'an. Hak Cipta Dilindungi.</p>
-                <p>Dibuat dengan <i class='bx bxs-heart'></i> untuk pendidikan Indonesia</p>
+                <p>&copy; 2026 Sekolah Tinggi Agama Islam Hamalatul Qur'an (STAIHA). Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
