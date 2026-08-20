@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrator — STAIHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1b5e20 100%); height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .login-card { background: #ffffff; width: 100%; max-width: 420px; border-radius: 16px; padding: 40px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
+        .login-header { text-align: center; margin-bottom: 30px; }
+        .login-header img { height: 50px; margin-bottom: 12px; }
+        .login-header h3 { font-size: 1.3rem; font-weight: 700; color: #0f172a; }
+        .login-header p { font-size: 0.82rem; color: #64748b; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #1e293b; margin-bottom: 8px; }
+        .input-box { position: relative; }
+        .input-box i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 1.1rem; }
+        .input-box input { width: 100%; padding: 12px 14px 12px 42px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 0.88rem; transition: border 0.2s; }
+        .input-box input:focus { border-color: #1b5e20; }
+        .btn-login { width: 100%; padding: 12px; background: #1b5e20; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; }
+        .btn-login:hover { background: #2e7d32; }
+        .login-footer { text-align: center; margin-top: 20px; font-size: 0.78rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="login-header">
+            <img src="../img/logo-clean.png" alt="Logo STAIHA">
+            <h3>Portal Administrator</h3>
+            <p>Sekolah Tinggi Agama Islam Hamalatul Qur'an</p>
+        </div>
+
+        <form action="index.html" method="GET">
+            <div class="form-group">
+                <label for="email">Email Administrator</label>
+                <div class="input-box">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" id="email" placeholder="admin@staiha.ac.id" required value="admin@staiha.ac.id">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Kata Sandi</label>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" id="password" placeholder="••••••••" required value="password123">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">
+                <i class='bx bx-log-in'></i> Masuk ke Dashboard
+            </button>
+        </form>
+
+        <div class="login-footer">
+            &copy; 2026 STAIHA Admin System. Hak cipta dilindungi.
+        </div>
+    </div>
+
+</body>
+</html>

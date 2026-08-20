@@ -103,9 +103,7 @@
         <div class="container daftar-layout">
 
             <!-- ---- FORM AREA ---- -->
-            <div class="form-area">
-
-                <!-- Step Indicator -->
+            <div class="form-area">                <!-- Step Indicator -->
                 <div class="step-indicator">
                     <div class="step active" id="step-ind-1">
                         <div class="step-circle"><i class='bx bx-user'></i></div>
@@ -118,6 +116,11 @@
                     </div>
                     <div class="step-line"></div>
                     <div class="step" id="step-ind-3">
+                        <div class="step-circle"><i class='bx bx-cloud-upload'></i></div>
+                        <span>Upload Berkas</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step-ind-4">
                         <div class="step-circle"><i class='bx bx-check-circle'></i></div>
                         <span>Konfirmasi</span>
                     </div>
@@ -142,10 +145,10 @@
                                 <span class="form-error" id="err-namaLengkap"></span>
                             </div>
                             <div class="form-group">
-                                <label for="nik">NIK (No. KTP/KK) <span>*</span></label>
+                                <label for="nik">Nomor NIK (KTP/KK) <span>*</span></label>
                                 <div class="input-wrapper">
                                     <i class='bx bx-id-card'></i>
-                                    <input type="text" id="nik" name="nik" placeholder="16 digit nomor NIK" maxlength="16" required>
+                                    <input type="text" id="nik" name="nik" placeholder="16 digit NIK" maxlength="16" required>
                                 </div>
                                 <span class="form-error" id="err-nik"></span>
                             </div>
@@ -155,8 +158,8 @@
                             <div class="form-group">
                                 <label for="tempatLahir">Tempat Lahir <span>*</span></label>
                                 <div class="input-wrapper">
-                                    <i class='bx bx-map'></i>
-                                    <input type="text" id="tempatLahir" name="tempatLahir" placeholder="Kota tempat lahir" required>
+                                    <i class='bx bx-map-pin'></i>
+                                    <input type="text" id="tempatLahir" name="tempatLahir" placeholder="Kota lahir" required>
                                 </div>
                                 <span class="form-error" id="err-tempatLahir"></span>
                             </div>
@@ -199,15 +202,15 @@
                                 <label for="noHp">No. HP / WhatsApp <span>*</span></label>
                                 <div class="input-wrapper">
                                     <i class='bx bxl-whatsapp'></i>
-                                    <input type="tel" id="noHp" name="noHp" placeholder="08xx-xxxx-xxxx" required>
+                                    <input type="tel" id="noHp" name="noHp" placeholder="08xxxxxxxxxx" required>
                                 </div>
                                 <span class="form-error" id="err-noHp"></span>
                             </div>
                             <div class="form-group">
-                                <label for="emailPribadi">Email <span>*</span></label>
+                                <label for="emailPribadi">Email Aktif <span>*</span></label>
                                 <div class="input-wrapper">
                                     <i class='bx bx-envelope'></i>
-                                    <input type="email" id="emailPribadi" name="emailPribadi" placeholder="nama@email.com" required>
+                                    <input type="email" id="emailPribadi" name="emailPribadi" placeholder="email@domain.com" required>
                                 </div>
                                 <span class="form-error" id="err-emailPribadi"></span>
                             </div>
@@ -217,23 +220,22 @@
                             <div class="form-group">
                                 <label for="namaOrtu">Nama Orang Tua / Wali <span>*</span></label>
                                 <div class="input-wrapper">
-                                    <i class='bx bx-group'></i>
-                                    <input type="text" id="namaOrtu" name="namaOrtu" placeholder="Nama lengkap orang tua/wali" required>
+                                    <i class='bx bx-user-check'></i>
+                                    <input type="text" id="namaOrtu" name="namaOrtu" placeholder="Nama ayah/ibu/wali" required>
                                 </div>
                                 <span class="form-error" id="err-namaOrtu"></span>
                             </div>
                             <div class="form-group">
-                                <label for="hpOrtu">No. HP Orang Tua / Wali <span>*</span></label>
+                                <label for="hpOrtu">No. HP Orang Tua <span>*</span></label>
                                 <div class="input-wrapper">
                                     <i class='bx bx-phone'></i>
-                                    <input type="tel" id="hpOrtu" name="hpOrtu" placeholder="08xx-xxxx-xxxx" required>
+                                    <input type="tel" id="hpOrtu" name="hpOrtu" placeholder="08xxxxxxxxxx" required>
                                 </div>
                                 <span class="form-error" id="err-hpOrtu"></span>
                             </div>
                         </div>
 
-                        <div class="step-nav">
-                            <span></span>
+                        <div class="step-nav justify-end">
                             <button type="button" class="btn btn-primary" id="toStep2">
                                 Selanjutnya <i class='bx bx-right-arrow-alt'></i>
                             </button>
@@ -243,35 +245,24 @@
                     <!-- ======== STEP 2: DATA AKADEMIK ======== -->
                     <div class="form-step" id="step2">
                         <div class="step-header">
-                            <h2><i class='bx bx-book-open'></i> Data Akademik</h2>
-                            <p>Informasi latar belakang pendidikan dan pilihan program pendidikan Anda.</p>
+                            <h2><i class='bx bx-book-bookmark'></i> Data Akademik & Program Studi</h2>
+                            <p>Pilih jurusan asal dan program studi pilihan Anda di STAIHA.</p>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="asalSekolah">Asal Sekolah / Madrasah <span>*</span></label>
+                                <label for="asalSekolah">Nama Sekolah Asal <span>*</span></label>
                                 <div class="input-wrapper">
                                     <i class='bx bxs-school'></i>
-                                    <input type="text" id="asalSekolah" name="asalSekolah" placeholder="Nama sekolah asal" required>
+                                    <input type="text" id="asalSekolah" name="asalSekolah" placeholder="SMA / MA / SMK / Pesantren" required>
                                 </div>
                                 <span class="form-error" id="err-asalSekolah"></span>
                             </div>
                             <div class="form-group">
-                                <label for="jurusanSekolah">Jurusan di Sekolah <span>*</span></label>
+                                <label for="jurusanSekolah">Jurusan Sekolah <span>*</span></label>
                                 <div class="input-wrapper">
-                                    <i class='bx bx-category'></i>
-                                    <select id="jurusanSekolah" name="jurusanSekolah" required>
-                                        <option value="">-- Pilih Jurusan --</option>
-                                        <option>IPA / MIPA</option>
-                                        <option>IPS</option>
-                                        <option>Bahasa</option>
-                                        <option>SMK Teknik Informatika</option>
-                                        <option>SMK Teknik Komputer</option>
-                                        <option>SMK Bisnis & Manajemen</option>
-                                        <option>SMK lainnya</option>
-                                        <option>MA / Madrasah Aliyah</option>
-                                        <option>Lainnya</option>
-                                    </select>
+                                    <i class='bx bx-notepad'></i>
+                                    <input type="text" id="jurusanSekolah" name="jurusanSekolah" placeholder="IPA / IPS / Keagamaan / TKJ / dll" required>
                                 </div>
                                 <span class="form-error" id="err-jurusanSekolah"></span>
                             </div>
@@ -281,60 +272,60 @@
                             <div class="form-group">
                                 <label for="tahunLulus">Tahun Lulus <span>*</span></label>
                                 <div class="input-wrapper">
-                                    <i class='bx bx-calendar-check'></i>
+                                    <i class='bx bx-calendar-event'></i>
                                     <select id="tahunLulus" name="tahunLulus" required>
                                         <option value="">-- Pilih Tahun --</option>
                                         <option>2026</option>
                                         <option>2025</option>
                                         <option>2024</option>
                                         <option>2023</option>
-                                        <option>2022</option>
-                                        <option>2021</option>
-                                        <option>Sebelum 2021</option>
+                                        <option>2022 &amp; sebelumnya</option>
                                     </select>
                                 </div>
                                 <span class="form-error" id="err-tahunLulus"></span>
                             </div>
                             <div class="form-group">
-                                <label for="nilaiRata">Nilai Rata-rata Ijazah <span>*</span></label>
+                                <label for="nilaiRata">Nilai Rata-rata Ujian / Rapor <span>*</span></label>
                                 <div class="input-wrapper">
-                                    <i class='bx bx-bar-chart-alt-2'></i>
-                                    <input type="number" id="nilaiRata" name="nilaiRata" placeholder="Contoh: 85.50" min="0" max="100" step="0.01" required>
+                                    <i class='bx bx-stats'></i>
+                                    <input type="number" id="nilaiRata" name="nilaiRata" min="0" max="100" step="0.1" placeholder="Skala 0-100 (mis. 85.5)" required>
                                 </div>
                                 <span class="form-error" id="err-nilaiRata"></span>
                             </div>
                         </div>
 
-                        <div class="form-group full">
-                            <label for="prodiPilihan1">Program Pendidikan Pilihan 1 <span>*</span></label>
-                            <div class="input-wrapper">
-                                <i class='bx bx-graduation'></i>
-                                <select id="prodiPilihan1" name="prodiPilihan1" required>
-                                    <option value="">-- Pilih Program Pendidikan Utama --</option>
-                                    <option>Tahfidz Al-Qur'an</option>
-                                    <option>Dirosah Islamiyah</option>
-                                    <option>Bahasa Arab</option>
-                                    <option>Program I'dad (Persiapan)</option>
-                                    <option>Pengkaderan Da'i</option>
-                                    <option>Tahfidz Bersanad</option>
-                                </select>
+                        <!-- Choice Prodi -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prodiPilihan1">Pilihan Program Studi 1 <span>*</span></label>
+                                <div class="input-wrapper">
+                                    <i class='bx bxs-graduation'></i>
+                                    <select id="prodiPilihan1" name="prodiPilihan1" required>
+                                        <option value="">-- Pilih Prodi Utama --</option>
+                                        <option value="S1 Pendidikan Agama Islam (PAI)">S1 Pendidikan Agama Islam (PAI)</option>
+                                        <option value="S1 Pendidikan Bahasa Arab (PBA)">S1 Pendidikan Bahasa Arab (PBA)</option>
+                                        <option value="S1 Ekonomi Syariah (EKS)">S1 Ekonomi Syariah</option>
+                                        <option value="S1 Perbankan Syariah (PBS)">S1 Perbankan Syariah</option>
+                                        <option value="S1 Hukum Keluarga Islam (HKI)">S1 Hukum Keluarga Islam (HKI)</option>
+                                        <option value="S1 Ilmu Al-Qur'an dan Tafsir (IAT)">S1 Ilmu Al-Qur'an dan Tafsir (IAT)</option>
+                                    </select>
+                                </div>
+                                <span class="form-error" id="err-prodiPilihan1"></span>
                             </div>
-                            <span class="form-error" id="err-prodiPilihan1"></span>
-                        </div>
-
-                        <div class="form-group full">
-                            <label for="prodiPilihan2">Program Pendidikan Pilihan 2 <small>(opsional)</small></label>
-                            <div class="input-wrapper">
-                                <i class='bx bx-graduation'></i>
-                                <select id="prodiPilihan2" name="prodiPilihan2">
-                                    <option value="">-- Pilih Program Pendidikan Cadangan --</option>
-                                    <option>Tahfidz Al-Qur'an</option>
-                                    <option>Dirosah Islamiyah</option>
-                                    <option>Bahasa Arab</option>
-                                    <option>Program I'dad (Persiapan)</option>
-                                    <option>Pengkaderan Da'i</option>
-                                    <option>Tahfidz Bersanad</option>
-                                </select>
+                            <div class="form-group">
+                                <label for="prodiPilihan2">Pilihan Program Studi 2 (Cadangan)</label>
+                                <div class="input-wrapper">
+                                    <i class='bx bx-graduation'></i>
+                                    <select id="prodiPilihan2" name="prodiPilihan2">
+                                        <option value="">-- Pilih Prodi Cadangan (Opsional) --</option>
+                                        <option value="S1 Pendidikan Agama Islam (PAI)">S1 Pendidikan Agama Islam (PAI)</option>
+                                        <option value="S1 Pendidikan Bahasa Arab (PBA)">S1 Pendidikan Bahasa Arab (PBA)</option>
+                                        <option value="S1 Ekonomi Syariah (EKS)">S1 Ekonomi Syariah</option>
+                                        <option value="S1 Perbankan Syariah (PBS)">S1 Perbankan Syariah</option>
+                                        <option value="S1 Hukum Keluarga Islam (HKI)">S1 Hukum Keluarga Islam (HKI)</option>
+                                        <option value="S1 Ilmu Al-Qur'an dan Tafsir (IAT)">S1 Ilmu Al-Qur'an dan Tafsir (IAT)</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
@@ -378,51 +369,11 @@
                             <span class="form-error" id="err-jalurMasuk"></span>
                         </div>
 
-                        <!-- Upload Dokumen -->
-                        <div class="docs-section">
-                            <h4><i class='bx bx-file'></i> Upload Dokumen</h4>
-                            <p>Format: PDF / JPG / PNG. Ukuran maks. 2MB per file.</p>
-                            <div class="docs-grid">
-                                <div class="doc-item">
-                                    <label for="fotoKtp">
-                                        <i class='bx bx-id-card'></i>
-                                        <span>Scan KTP / KK</span>
-                                        <small>Wajib</small>
-                                    </label>
-                                    <input type="file" id="fotoKtp" name="fotoKtp" accept=".pdf,.jpg,.jpeg,.png">
-                                </div>
-                                <div class="doc-item">
-                                    <label for="fotoIjazah">
-                                        <i class='bx bxs-graduation'></i>
-                                        <span>Scan Ijazah / SKL</span>
-                                        <small>Wajib</small>
-                                    </label>
-                                    <input type="file" id="fotoIjazah" name="fotoIjazah" accept=".pdf,.jpg,.jpeg,.png">
-                                </div>
-                                <div class="doc-item">
-                                    <label for="fotoRapor">
-                                        <i class='bx bx-book-bookmark'></i>
-                                        <span>Rapor Semester Akhir</span>
-                                        <small>Wajib</small>
-                                    </label>
-                                    <input type="file" id="fotoRapor" name="fotoRapor" accept=".pdf,.jpg,.jpeg,.png">
-                                </div>
-                                <div class="doc-item">
-                                    <label for="fotoPas">
-                                        <i class='bx bx-camera'></i>
-                                        <span>Pas Foto 3×4</span>
-                                        <small>Wajib · latar biru</small>
-                                    </label>
-                                    <input type="file" id="fotoPas" name="fotoPas" accept=".jpg,.jpeg,.png">
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="form-group full">
                             <label for="motivasi">Motivasi Mendaftar <span>*</span></label>
                             <div class="input-wrapper">
                                 <i class='bx bx-message-square-detail'></i>
-                                <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan mengapa Anda memilih STAIHA dan apa tujuan akademik Anda..." required></textarea>
+                                <textarea id="motivasi" name="motivasi" rows="3" placeholder="Ceritakan mengapa Anda memilih STAIHA dan apa tujuan akademik Anda..." required></textarea>
                             </div>
                             <span class="form-error" id="err-motivasi"></span>
                         </div>
@@ -437,11 +388,97 @@
                         </div>
                     </div>
 
-                    <!-- ======== STEP 3: KONFIRMASI ======== -->
+                    <!-- ======== STEP 3: UPLOAD BERKAS ======== -->
                     <div class="form-step" id="step3">
                         <div class="step-header">
-                            <h2><i class='bx bx-check-shield'></i> Konfirmasi Data</h2>
-                            <p>Periksa kembali data Anda sebelum mengirim pendaftaran.</p>
+                            <h2><i class='bx bx-cloud-upload'></i> Upload Dokumen Persyaratan</h2>
+                            <p>Unggah berkas kelengkapan pendaftaran. Format: PDF, JPG, atau PNG (Maksimal 2MB per file).</p>
+                        </div>
+
+                        <div class="upload-grid">
+                            <!-- Pas Foto -->
+                            <div class="upload-card">
+                                <div class="upload-icon"><i class='bx bx-camera'></i></div>
+                                <div class="upload-info">
+                                    <h5>Pas Foto 3x4 <span>*</span></h5>
+                                    <p>Foto formal latar biru/merah. JPG/PNG (Maks 2MB)</p>
+                                </div>
+                                <div class="file-dropzone" id="dropzone-fotoPas">
+                                    <input type="file" id="fotoPas" name="fotoPas" accept=".jpg,.jpeg,.png" required hidden>
+                                    <button type="button" class="btn btn-outline-sm btn-select-file" onclick="document.getElementById('fotoPas').click()">
+                                        <i class='bx bx-upload'></i> Pilih File
+                                    </button>
+                                    <span class="file-chosen-name" id="name-fotoPas">Belum ada file dipilih</span>
+                                </div>
+                                <span class="form-error" id="err-fotoPas"></span>
+                            </div>
+
+                            <!-- Scan KTP / KK -->
+                            <div class="upload-card">
+                                <div class="upload-icon"><i class='bx bx-id-card'></i></div>
+                                <div class="upload-info">
+                                    <h5>Scan KTP / Kartu Keluarga <span>*</span></h5>
+                                    <p>Dokumen berwarna dan terbaca jelas. PDF/JPG/PNG</p>
+                                </div>
+                                <div class="file-dropzone" id="dropzone-fotoKtp">
+                                    <input type="file" id="fotoKtp" name="fotoKtp" accept=".pdf,.jpg,.jpeg,.png" required hidden>
+                                    <button type="button" class="btn btn-outline-sm btn-select-file" onclick="document.getElementById('fotoKtp').click()">
+                                        <i class='bx bx-upload'></i> Pilih File
+                                    </button>
+                                    <span class="file-chosen-name" id="name-fotoKtp">Belum ada file dipilih</span>
+                                </div>
+                                <span class="form-error" id="err-fotoKtp"></span>
+                            </div>
+
+                            <!-- Scan Ijazah / SKL -->
+                            <div class="upload-card">
+                                <div class="upload-icon"><i class='bx bxs-graduation'></i></div>
+                                <div class="upload-info">
+                                    <h5>Scan Ijazah / SKL <span>*</span></h5>
+                                    <p>Ijazah SMA/MA/SMK/Pesantren atau SKL Asli</p>
+                                </div>
+                                <div class="file-dropzone" id="dropzone-fotoIjazah">
+                                    <input type="file" id="fotoIjazah" name="fotoIjazah" accept=".pdf,.jpg,.jpeg,.png" required hidden>
+                                    <button type="button" class="btn btn-outline-sm btn-select-file" onclick="document.getElementById('fotoIjazah').click()">
+                                        <i class='bx bx-upload'></i> Pilih File
+                                    </button>
+                                    <span class="file-chosen-name" id="name-fotoIjazah">Belum ada file dipilih</span>
+                                </div>
+                                <span class="form-error" id="err-fotoIjazah"></span>
+                            </div>
+
+                            <!-- Scan Rapor / Prestasi (Opsional) -->
+                            <div class="upload-card">
+                                <div class="upload-icon"><i class='bx bx-award'></i></div>
+                                <div class="upload-info">
+                                    <h5>Sertifikat / Rapor <small>(Opsional)</small></h5>
+                                    <p>Sertifikat Tahfidz, Lomba, atau Rapor Terakhir</p>
+                                </div>
+                                <div class="file-dropzone" id="dropzone-fotoRapor">
+                                    <input type="file" id="fotoRapor" name="fotoRapor" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                                    <button type="button" class="btn btn-outline-sm btn-select-file" onclick="document.getElementById('fotoRapor').click()">
+                                        <i class='bx bx-upload'></i> Pilih File
+                                    </button>
+                                    <span class="file-chosen-name" id="name-fotoRapor">Belum ada file dipilih</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-nav">
+                            <button type="button" class="btn btn-ghost" id="toStep2From3">
+                                <i class='bx bx-left-arrow-alt'></i> Kembali
+                            </button>
+                            <button type="button" class="btn btn-primary" id="toStep4">
+                                Selanjutnya <i class='bx bx-right-arrow-alt'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ======== STEP 4: KONFIRMASI ======== -->
+                    <div class="form-step" id="step4">
+                        <div class="step-header">
+                            <h2><i class='bx bx-check-shield'></i> Konfirmasi Data & Kirim</h2>
+                            <p>Periksa kembali seluruh ringkasan data sebelum mengirimkan pendaftaran Anda.</p>
                         </div>
 
                         <div class="summary-card" id="summaryCard">
@@ -465,13 +502,12 @@
                         </div>
 
                         <div class="step-nav">
-                            <button type="button" class="btn btn-ghost" id="backToStep2">
+                            <button type="button" class="btn btn-ghost" id="backToStep3">
                                 <i class='bx bx-left-arrow-alt'></i> Kembali
                             </button>
                             <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
                                 <i class='bx bx-send'></i> Kirim Pendaftaran
                             </button>
-                        </div>
                     </div>
 
                 </form>

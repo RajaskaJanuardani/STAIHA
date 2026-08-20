@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Pendaftaran PMB — Admin STAIHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../img/logo-clean.png" alt="STAIHA">
+            <div class="sidebar-brand">
+                <h3>STAIHA Admin</h3>
+                <p>Panitia PMB System</p>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="menu-label">Main Menu</li>
+            <li><a href="index.html"><i class='bx bx-grid-alt'></i> Dashboard</a></li>
+            <li class="active"><a href="pmb.html"><i class='bx bxs-user-detail'></i> Panitia PMB</a></li>
+            <li><a href="berita.html"><i class='bx bx-news'></i> CMS Berita</a></li>
+            <li class="menu-label">Pengaturan</li>
+            <li><a href="../index.html" target="_blank"><i class='bx bx-globe'></i> Lihat Website</a></li>
+            <li><a href="login.html"><i class='bx bx-log-out'></i> Keluar</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Top Navbar -->
+        <header class="admin-navbar">
+            <div class="nav-search">
+                <i class='bx bx-search'></i>
+                <input type="text" id="pmbSearch" placeholder="Cari NIK, Nama, atau No Reg...">
+            </div>
+
+            <div class="nav-user">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AhmadSantoso&backgroundColor=b6e3f4" alt="Admin" class="user-avatar">
+                    <div class="user-info">
+                        <h5>Panitia PMB</h5>
+                        <p>Tim Admisi STAIHA</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="admin-content">
+            <div class="page-header">
+                <div>
+                    <h2>Kelola Pendaftaran Mahasiswa Baru</h2>
+                    <p>Verifikasi berkas dokumen pendaftar, ubah kelulusan, dan cetak kartu pendaftaran.</p>
+                </div>
+            </div>
+
+            <!-- Table Component -->
+            <div class="card-table">
+                <div class="table-header-tools">
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span style="font-size: 0.85rem; font-weight: 600;">Filter Status:</span>
+                        <select class="form-control-admin" style="width: auto; padding: 6px 12px;" id="statusFilter">
+                            <option value="all">Semua Status</option>
+                            <option value="pending">Pending Verifikasi</option>
+                            <option value="verified">Terverifikasi</option>
+                            <option value="accepted">Lulus / Diterima</option>
+                            <option value="rejected">Ditolak</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-action" style="width: auto; padding: 6px 14px; background: #0284c7; color:#fff; border:none;" onclick="alert('Exporting data to Excel...')">
+                            <i class='bx bx-export' style="margin-right: 4px;"></i> Export Excel
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>No. Registration</th>
+                                <th>Nama Pendaftar</th>
+                                <th>NIK</th>
+                                <th>Prodi Utama</th>
+                                <th>Jalur</th>
+                                <th>Status Berkas</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pmbTableBody">
+                            <tr>
+                                <td><strong>REG-STAIHA-982140</strong></td>
+                                <td>Muhammad Rizky Ramadhan</td>
+                                <td>3215012809020001</td>
+                                <td>S1 PAI</td>
+                                <td><span style="text-transform: capitalize;">Reguler</span></td>
+                                <td><span class="badge badge-pending">Pending Verifikasi</span></td>
+                                <td>
+                                    <button class="btn-action" title="Verifikasi & Detail" onclick="openDetailModal('Muhammad Rizky Ramadhan', 'REG-STAIHA-982140', '3215012809020001', 'S1 Pendidikan Agama Islam (PAI)', '08123456789', 'pending')"><i class='bx bx-check-shield'></i></button>
+                                    <button class="btn-action" title="Cetak Kartu" onclick="printCard('Muhammad Rizky Ramadhan', 'REG-STAIHA-982140', 'S1 PAI')"><i class='bx bx-printer'></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>REG-STAIHA-871239</strong></td>
+                                <td>Siti Fatimah Az-Zahra</td>
+                                <td>3215025510030004</td>
+                                <td>S1 Ekonomi Syariah</td>
+                                <td><span style="text-transform: capitalize;">Prestasi</span></td>
+                                <td><span class="badge badge-verified">Terverifikasi</span></td>
+                                <td>
+                                    <button class="btn-action" title="Verifikasi & Detail" onclick="openDetailModal('Siti Fatimah Az-Zahra', 'REG-STAIHA-871239', '3215025510030004', 'S1 Ekonomi Syariah', '08198765432', 'verified')"><i class='bx bx-check-shield'></i></button>
+                                    <button class="btn-action" title="Cetak Kartu" onclick="printCard('Siti Fatimah Az-Zahra', 'REG-STAIHA-871239', 'S1 Ekonomi Syariah')"><i class='bx bx-printer'></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>REG-STAIHA-763412</strong></td>
+                                <td>Ahmad Fauzi Ridwan</td>
+                                <td>3215031201010009</td>
+                                <td>S1 Ilmu Al-Qur'an dan Tafsir</td>
+                                <td><span style="text-transform: capitalize;">Beasiswa</span></td>
+                                <td><span class="badge badge-accepted">Lulus / Diterima</span></td>
+                                <td>
+                                    <button class="btn-action" title="Verifikasi & Detail" onclick="openDetailModal('Ahmad Fauzi Ridwan', 'REG-STAIHA-763412', '3215031201010009', 'S1 Ilmu Al-Qur\'an dan Tafsir', '085211223344', 'accepted')"><i class='bx bx-check-shield'></i></button>
+                                    <button class="btn-action" title="Cetak Kartu" onclick="printCard('Ahmad Fauzi Ridwan', 'REG-STAIHA-763412', 'S1 Ilmu Al-Qur\'an dan Tafsir')"><i class='bx bx-printer'></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Detail & Verification Modal -->
+    <div class="admin-modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4><i class='bx bx-user-check'></i> Verifikasi Pendaftaran PMB</h4>
+                <i class='bx bx-x modal-close' onclick="closeModal('detailModal')"></i>
+            </div>
+            <div class="modal-body">
+                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e2e8f0;">
+                    <p style="font-size: 0.85rem; margin-bottom: 4px;"><strong>Nama:</strong> <span id="mNama"></span></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 4px;"><strong>No. Registrasi:</strong> <span id="mReg"></span></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 4px;"><strong>NIK:</strong> <span id="mNik"></span></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 4px;"><strong>Prodi Pilihan:</strong> <span id="mProdi"></span></p>
+                    <p style="font-size: 0.85rem;"><strong>No. HP/WA:</strong> <span id="mHp"></span></p>
+                </div>
+
+                <h5 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 10px;"><i class='bx bx-file'></i> Berkas Dokumen Terunggah</h5>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+                    <div style="padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff;">
+                        <span style="font-size: 0.8rem; font-weight: 600; display: block;">Pas Foto 3x4:</span>
+                        <a href="https://api.dicebear.com/7.x/avataaars/svg?seed=Pendaftar" target="_blank" style="font-size: 0.8rem; color: #0284c7; text-decoration: none;"><i class='bx bx-link-external'></i> Lihat Foto</a>
+                    </div>
+                    <div style="padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff;">
+                        <span style="font-size: 0.8rem; font-weight: 600; display: block;">Scan KTP/KK:</span>
+                        <a href="#" onclick="alert('Membuka PDF KTP/KK...')" style="font-size: 0.8rem; color: #0284c7; text-decoration: none;"><i class='bx bx-file-pdf'></i> ktp_kk_scan.pdf</a>
+                    </div>
+                    <div style="padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff;">
+                        <span style="font-size: 0.8rem; font-weight: 600; display: block;">Scan Ijazah/SKL:</span>
+                        <a href="#" onclick="alert('Membuka PDF Ijazah...')" style="font-size: 0.8rem; color: #0284c7; text-decoration: none;"><i class='bx bx-file-pdf'></i> ijazah_skl.pdf</a>
+                    </div>
+                </div>
+
+                <div class="form-group-admin">
+                    <label for="statusSelect">Ubah Status Kelulusan / Verifikasi</label>
+                    <select id="statusSelect" class="form-control-admin">
+                        <option value="pending">Pending Verifikasi</option>
+                        <option value="verified">Terverifikasi (Dokumen Lengkap)</option>
+                        <option value="accepted">Lulus / Diterima</option>
+                        <option value="rejected">Ditolak</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-action" style="width: auto; padding: 8px 16px;" onclick="closeModal('detailModal')">Batal</button>
+                <button type="button" class="btn-action" style="width: auto; padding: 8px 16px; background: var(--admin-primary); color: #fff; border:none;" onclick="saveStatus()">Simpan Perubahan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDetailModal(nama, reg, nik, prodi, hp, status) {
+            document.getElementById('mNama').innerText = nama;
+            document.getElementById('mReg').innerText = reg;
+            document.getElementById('mNik').innerText = nik;
+            document.getElementById('mProdi').innerText = prodi;
+            document.getElementById('mHp').innerText = hp;
+            document.getElementById('statusSelect').value = status;
+            document.getElementById('detailModal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function saveStatus() {
+            alert('Status pendaftar berhasil diperbarui!');
+            closeModal('detailModal');
+        }
+
+        function printCard(nama, reg, prodi) {
+            alert('Mencetak Kartu Bukti Pendaftaran PMB STAIHA:\n\nNama: ' + nama + '\nNo. Reg: ' + reg + '\nProdi: ' + prodi + '\n\nSilakan gunakan opsi Print/PDF di browser.');
+        }
+    </script>
+</body>
+</html>

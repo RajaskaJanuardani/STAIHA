@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview — Admin STAIHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../img/logo-clean.png" alt="STAIHA">
+            <div class="sidebar-brand">
+                <h3>STAIHA Admin</h3>
+                <p>Sistem Informasi PMB</p>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="menu-label">Main Menu</li>
+            <li class="active"><a href="index.html"><i class='bx bx-grid-alt'></i> Dashboard</a></li>
+            <li><a href="pmb.html"><i class='bx bxs-user-detail'></i> Panitia PMB</a></li>
+            <li><a href="berita.html"><i class='bx bx-news'></i> CMS Berita</a></li>
+            <li class="menu-label">Pengaturan</li>
+            <li><a href="../index.html" target="_blank"><i class='bx bx-globe'></i> Lihat Website</a></li>
+            <li><a href="login.html"><i class='bx bx-log-out'></i> Keluar</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <small style="color: rgba(255,255,255,0.5)">v1.2.0 • Laravel 11 Ready</small>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Top Navbar -->
+        <header class="admin-navbar">
+            <div class="nav-search">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Cari NIK, Nama Pendaftar, Berita...">
+            </div>
+
+            <div class="nav-user">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AhmadSantoso&backgroundColor=b6e3f4" alt="Admin" class="user-avatar">
+                    <div class="user-info">
+                        <h5>Administrator</h5>
+                        <p>Super Admin</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="admin-content">
+            <div class="page-header">
+                <div>
+                    <h2>Dashboard Overview</h2>
+                    <p>Ringkasan statistik pendaftaran PMB dan publikasi berita STAIHA.</p>
+                </div>
+                <a href="pmb.html" class="btn-action" style="width: auto; padding: 8px 16px; background: var(--admin-primary); color: #fff; border: none;" title="Kelola PMB">
+                    <i class='bx bxs-user-detail' style="margin-right: 6px;"></i> Kelola PMB
+                </a>
+            </div>
+
+            <!-- Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-data">
+                        <h3>142</h3>
+                        <p>Total Pendaftar PMB</p>
+                    </div>
+                    <div class="metric-icon green">
+                        <i class='bx bxs-user-plus'></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-data">
+                        <h3>28</h3>
+                        <p>Berkas Perlu Verifikasi</p>
+                    </div>
+                    <div class="metric-icon yellow">
+                        <i class='bx bx-time-five'></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-data">
+                        <h3>96</h3>
+                        <p>Mahasiswa Diterima</p>
+                    </div>
+                    <div class="metric-icon blue">
+                        <i class='bx bx-check-double'></i>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-data">
+                        <h3>18</h3>
+                        <p>Artikel Berita Terbit</p>
+                    </div>
+                    <div class="metric-icon purple">
+                        <i class='bx bx-news'></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Registrations Table -->
+            <div class="card-table">
+                <div class="table-header-tools">
+                    <h4 style="font-size: 1rem; font-weight: 700;">Pendaftaran PMB Terbaru</h4>
+                    <a href="pmb.html" style="font-size: 0.82rem; color: var(--admin-primary); text-decoration: none; font-weight: 600;">Lihat Semua <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>No. Reg</th>
+                                <th>Nama Lengkap</th>
+                                <th>NIK</th>
+                                <th>Prodi Pilihan</th>
+                                <th>Tanggal</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>REG-STAIHA-982140</strong></td>
+                                <td>Muhammad Rizky Ramadhan</td>
+                                <td>3215012809020001</td>
+                                <td>S1 Pendidikan Agama Islam (PAI)</td>
+                                <td>20/08/2026</td>
+                                <td><span class="badge badge-pending">Pending Verifikasi</span></td>
+                                <td>
+                                    <a href="pmb.html" class="btn-action" title="Detail"><i class='bx bx-show'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>REG-STAIHA-871239</strong></td>
+                                <td>Siti Fatimah Az-Zahra</td>
+                                <td>3215025510030004</td>
+                                <td>S1 Ekonomi Syariah</td>
+                                <td>19/08/2026</td>
+                                <td><span class="badge badge-verified">Terverifikasi</span></td>
+                                <td>
+                                    <a href="pmb.html" class="btn-action" title="Detail"><i class='bx bx-show'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>REG-STAIHA-763412</strong></td>
+                                <td>Ahmad Fauzi Ridwan</td>
+                                <td>3215031201010009</td>
+                                <td>S1 Ilmu Al-Qur'an dan Tafsir (IAT)</td>
+                                <td>19/08/2026</td>
+                                <td><span class="badge badge-accepted">Lulus / Diterima</span></td>
+                                <td>
+                                    <a href="pmb.html" class="btn-action" title="Detail"><i class='bx bx-show'></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

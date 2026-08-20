@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Berita & Agenda — Admin STAIHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../img/logo-clean.png" alt="STAIHA">
+            <div class="sidebar-brand">
+                <h3>STAIHA Admin</h3>
+                <p>CMS Berita System</p>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li class="menu-label">Main Menu</li>
+            <li><a href="index.html"><i class='bx bx-grid-alt'></i> Dashboard</a></li>
+            <li><a href="pmb.html"><i class='bx bxs-user-detail'></i> Panitia PMB</a></li>
+            <li class="active"><a href="berita.html"><i class='bx bx-news'></i> CMS Berita</a></li>
+            <li class="menu-label">Pengaturan</li>
+            <li><a href="../index.html" target="_blank"><i class='bx bx-globe'></i> Lihat Website</a></li>
+            <li><a href="login.html"><i class='bx bx-log-out'></i> Keluar</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Top Navbar -->
+        <header class="admin-navbar">
+            <div class="nav-search">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Cari judul berita...">
+            </div>
+
+            <div class="nav-user">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AhmadSantoso&backgroundColor=b6e3f4" alt="Admin" class="user-avatar">
+                    <div class="user-info">
+                        <h5>Admin Humas</h5>
+                        <p>Editor Berita & Artikel</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="admin-content">
+            <div class="page-header">
+                <div>
+                    <h2>Kelola Berita & Agenda Kampus</h2>
+                    <p>Tulis artikel berita baru, upload foto sampul, dan atur status publikasi.</p>
+                </div>
+                <button type="button" class="btn-action" style="width: auto; padding: 8px 16px; background: var(--admin-primary); color: #fff; border:none;" onclick="openNewsModal()">
+                    <i class='bx bx-plus' style="margin-right: 6px;"></i> Tambah Berita Baru
+                </button>
+            </div>
+
+            <!-- Table Component -->
+            <div class="card-table">
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Sampul</th>
+                                <th>Judul Artikel</th>
+                                <th>Kategori</th>
+                                <th>Penulis</th>
+                                <th>Tanggal</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=100&h=60&fit=crop" style="width: 60px; height: 40px; border-radius: 4px; object-fit: cover;">
+                                </td>
+                                <td><strong>Wisuda Tahfidz Angkatan ke-5 STAIHA Karawang</strong></td>
+                                <td><span class="badge badge-verified">Akademik</span></td>
+                                <td>Humas STAIHA</td>
+                                <td>20/08/2026</td>
+                                <td><span class="badge badge-accepted">Published</span></td>
+                                <td>
+                                    <button class="btn-action" title="Edit" onclick="openNewsModal('Wisuda Tahfidz Angkatan ke-5 STAIHA Karawang')"><i class='bx bx-edit'></i></button>
+                                    <button class="btn-action" title="Hapus" onclick="alert('Artikel berhasil dihapus.')"><i class='bx bx-trash' style="color:#b91c1c;"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=100&h=60&fit=crop" style="width: 60px; height: 40px; border-radius: 4px; object-fit: cover;">
+                                </td>
+                                <td><strong>Seminar Nasional Membumikan Al-Qur'an di Era Digital 2026</strong></td>
+                                <td><span class="badge badge-verified">Seminar</span></td>
+                                <td>Humas STAIHA</td>
+                                <td>28/08/2026</td>
+                                <td><span class="badge badge-accepted">Published</span></td>
+                                <td>
+                                    <button class="btn-action" title="Edit" onclick="openNewsModal('Seminar Nasional Membumikan Al-Qur\'an di Era Digital 2026')"><i class='bx bx-edit'></i></button>
+                                    <button class="btn-action" title="Hapus" onclick="alert('Artikel berhasil dihapus.')"><i class='bx bx-trash' style="color:#b91c1c;"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=100&h=60&fit=crop" style="width: 60px; height: 40px; border-radius: 4px; object-fit: cover;">
+                                </td>
+                                <td><strong>Peresmian Asrama Mahasiswa Baru Kapasitas 200 Orang</strong></td>
+                                <td><span class="badge badge-verified">Fasilitas</span></td>
+                                <td>Yayasan</td>
+                                <td>15/06/2026</td>
+                                <td><span class="badge badge-accepted">Published</span></td>
+                                <td>
+                                    <button class="btn-action" title="Edit" onclick="openNewsModal('Peresmian Asrama Mahasiswa Baru Kapasitas 200 Orang')"><i class='bx bx-edit'></i></button>
+                                    <button class="btn-action" title="Hapus" onclick="alert('Artikel berhasil dihapus.')"><i class='bx bx-trash' style="color:#b91c1c;"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- News Form Modal -->
+    <div class="admin-modal" id="newsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="newsModalTitle"><i class='bx bx-news'></i> Form Artikel Berita</h4>
+                <i class='bx bx-x modal-close' onclick="closeModal('newsModal')"></i>
+            </div>
+            <div class="modal-body">
+                <div class="form-group-admin">
+                    <label for="newsTitle">Judul Artikel Berita <span>*</span></label>
+                    <input type="text" id="newsTitle" class="form-control-admin" placeholder="Masukkan judul berita menarik...">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group-admin">
+                        <label for="newsCategory">Kategori Berita</label>
+                        <select id="newsCategory" class="form-control-admin">
+                            <option>Akademik</option>
+                            <option>Seminar</option>
+                            <option>Penerimaan</option>
+                            <option>Kajian</option>
+                            <option>Kunjungan</option>
+                            <option>Fasilitas</option>
+                        </select>
+                    </div>
+                    <div class="form-group-admin">
+                        <label for="newsStatus">Status Publikasi</label>
+                        <select id="newsStatus" class="form-control-admin">
+                            <option value="published">Published (Terbit)</option>
+                            <option value="draft">Draft (Konsep)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group-admin">
+                    <label for="newsCover">Upload Foto Sampul (Cover Image)</label>
+                    <input type="file" id="newsCover" class="form-control-admin" accept="image/*">
+                </div>
+
+                <div class="form-group-admin">
+                    <label for="newsExcerpt">Ringkasan / Excerpt <span>*</span></label>
+                    <textarea id="newsExcerpt" class="form-control-admin" rows="2" placeholder="Ringkasan singkat berita untuk kartu beranda..."></textarea>
+                </div>
+
+                <div class="form-group-admin">
+                    <label for="newsContent">Isi Konten Berita Lengkap <span>*</span></label>
+                    <textarea id="newsContent" class="form-control-admin" rows="6" placeholder="Tuliskan isi berita selengkapnya..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-action" style="width: auto; padding: 8px 16px;" onclick="closeModal('newsModal')">Batal</button>
+                <button type="button" class="btn-action" style="width: auto; padding: 8px 16px; background: var(--admin-primary); color: #fff; border:none;" onclick="saveNews()">Simpan & Terbitkan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNewsModal(title) {
+            if (title) {
+                document.getElementById('newsModalTitle').innerText = 'Edit Artikel Berita';
+                document.getElementById('newsTitle').value = title;
+            } else {
+                document.getElementById('newsModalTitle').innerText = 'Tambah Berita Baru';
+                document.getElementById('newsTitle').value = '';
+            }
+            document.getElementById('newsModal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function saveNews() {
+            alert('Artikel berita berhasil disimpan & diterbitkan!');
+            closeModal('newsModal');
+        }
+    </script>
+</body>
+</html>
